@@ -1,28 +1,9 @@
-import Link from "next/link";
+import SiteNav from "../components/SiteNav";
 
 export default function AboutUs() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
-      <nav className="flex flex-wrap items-center gap-8 border-b bg-white px-6 py-5 shadow-sm md:px-12 lg:gap-16">
-        <Link href="/" aria-label="SHPE TAMU-CC home">
-          <img
-            src="/Pictures/logos/shpe_logo.png"
-            alt="SHPE TAMU-CC Logo"
-            className="h-14 w-auto md:h-16"
-          />
-        </Link>
-
-        <div className="flex flex-wrap gap-x-7 gap-y-3 text-base font-medium text-blue-950 md:text-lg lg:gap-x-10">
-          <Link href="/">Home</Link>
-          <Link href="/about-us" className="font-bold text-[#0067C5]">
-            About Us
-          </Link>
-          <Link href="/leadership">Leadership</Link>
-          <Link href="/membership">MemberSHPE</Link>
-          <Link href="/resources">Resources</Link>
-          <Link href="/sponsorship">Sponsorship</Link>
-        </div>
-      </nav>
+      <SiteNav />
 
       <section className="px-6 py-6 md:px-10 lg:py-8">
         <div className="mx-auto max-w-5xl space-y-5">
@@ -155,7 +136,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-      <footer className="bg-[#070832] px-6 py-8 text-center text-sm text-white/80">
+      <footer className="hidden">
         Society of Hispanic Professional Engineers at Texas A&amp;M
         University-Corpus Christi
       </footer>

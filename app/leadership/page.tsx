@@ -1,4 +1,4 @@
-import Link from "next/link";
+import SiteNav from "../components/SiteNav";
 
 const officers = [
   {
@@ -48,22 +48,7 @@ const officers = [
 export default function Leadership() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
-      <nav className="flex items-center gap-16 border-b bg-white px-12 py-6 shadow-sm">
-        <img
-          src="/Pictures/logos/shpe_logo.png"
-          alt="SHPE TAMU-CC Logo"
-          className="h-16 w-auto"
-        />
-
-        <div className="flex gap-10 text-lg font-medium text-blue-950">
-          <Link href="/">Home</Link>
-          <Link href="/about-us">About Us</Link>
-          <Link href="/leadership">Leadership</Link>
-          <Link href="/membership">MemberSHPE</Link>
-          <Link href="/resources">Resources</Link>
-          <Link href="/sponsorship">Sponsorship</Link>
-        </div>
-      </nav>
+      <SiteNav />
 
       <section className="min-h-[calc(100vh-113px)] overflow-hidden bg-gradient-to-br from-orange-200 via-pink-100 to-blue-200 px-10 py-16">
         <div className="mx-auto max-w-6xl">
