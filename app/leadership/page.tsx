@@ -1,56 +1,102 @@
-import SiteNav from "../components/SiteNav";
+import Link from "next/link";
+import SiteFooter from "../components/SiteFooter";
 
 const officers = [
   {
-    name: "Lucero Robles",
+    name: "Lucero Robles Aguirre",
     position: "President",
-    major: "[Major]",
-    classification: "[Year]",
-    email: "placeholder@tamucc.edu",
+    pronouns: "She/Her",
+    major: "Mechanical Engineering",
+    classification: "Senior",
+    email: "lroblesaguirre@islander.tamucc.edu",
+    linkedin: "https://www.linkedin.com/in/lucerorobles/",
+    image: "/Pictures/Leadership/lucero-robles-aguirre.jpeg",
   },
   {
     name: "Samuel Mack",
     position: "Vice President",
+    pronouns: "",
     major: "[Major]",
     classification: "[Year]",
-    email: "placeholder@tamucc.edu",
+    email: "smack2@islander.tamucc.edu",
+    linkedin: "https://www.linkedin.com/in/samuel-mack-80b38a40b/",
+    image: "/Pictures/logos/shpe_logo.png",
   },
   {
     name: "Andres Dwindt",
     position: "Treasurer",
+    pronouns: "",
     major: "[Major]",
     classification: "[Year]",
-    email: "placeholder@tamucc.edu",
+    email: "adwindt@islander.tamucc.edu",
+    linkedin: "https://www.linkedin.com/in/andres-dwindt-760902305/",
+    image: "/Pictures/logos/shpe_logo.png",
   },
   {
     name: "Karina Lugardo",
     position: "Director of Fundraising",
+    pronouns: "",
     major: "[Major]",
     classification: "[Year]",
-    email: "placeholder@tamucc.edu",
+    email: "klugardo@islander.tamucc.edu",
+    linkedin: "https://www.linkedin.com/in/karinalugardo/",
+    image: "/Pictures/logos/shpe_logo.png",
   },
   {
     name: "Joshua Gonzalez",
     position: "Director of Outreach",
+    pronouns: "",
     major: "[Major]",
     classification: "[Year]",
-    email: "placeholder@tamucc.edu",
+    email: "jgonzalez212@islander.tamucc.edu",
+    linkedin: "https://www.linkedin.com/in/joshua-gonzalez-2a3302383/",
+    image: "/Pictures/logos/shpe_logo.png",
   },
   {
     name: "Michael Mendez",
     position: "Director of Marketing",
+    pronouns: "",
     major: "[Major]",
     classification: "[Year]",
-    email: "placeholder@tamucc.edu",
+    email: "mmendez30@islander.tamucc.edu",
+    linkedin: "https://www.linkedin.com/in/michael-m-mendez/",
+    image: "/Pictures/logos/shpe_logo.png",
   },
 ];
 
 export default function Leadership() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
-      <SiteNav />
+      <nav className="flex items-center gap-16 border-b border-slate-200 bg-white px-12 py-6 shadow-sm">
+        <img
+          src="/Pictures/logos/shpe_logo.png"
+          alt="SHPE TAMU-CC Logo"
+          className="h-16 w-auto"
+        />
 
-      <section className="min-h-[calc(100vh-113px)] overflow-hidden bg-gradient-to-br from-orange-200 via-pink-100 to-blue-200 px-10 py-16">
+        <div className="flex gap-10 text-lg font-medium text-blue-950">
+          <Link className="transition hover:text-[#008c5a]" href="/">
+            Home
+          </Link>
+          <Link className="transition hover:text-[#008c5a]" href="/about-us">
+            About Us
+          </Link>
+          <Link className="transition hover:text-[#008c5a]" href="/leadership">
+            Leadership
+          </Link>
+          <Link className="transition hover:text-[#008c5a]" href="/membership">
+            MemberSHPE
+          </Link>
+          <Link className="transition hover:text-[#008c5a]" href="/resources">
+            Resources
+          </Link>
+          <Link className="transition hover:text-[#008c5a]" href="/sponsorship">
+            Sponsorship
+          </Link>
+        </div>
+      </nav>
+
+      <section className="min-h-[calc(100vh-113px)] overflow-hidden bg-gradient-to-br from-[#0077c8] via-[#1887d4] to-[#008c5a] px-10 py-16">
         <div className="mx-auto max-w-6xl">
           <div className="leadership-intro max-w-4xl">
             <p className="mb-4 text-lg font-semibold uppercase tracking-[0.45em] text-white">
@@ -61,7 +107,7 @@ export default function Leadership() {
               SHPE TAMUCC Officers
             </h1>
 
-            <div className="mt-6 h-0.5 w-20 bg-[#c96f4d]" />
+            <div className="mt-6 h-0.5 w-20 bg-white" />
 
             <p className="mt-6 text-lg font-semibold leading-8 text-white md:text-xl">
               At TAMUCC, the SHPE Executive Board bridges academic excellence
@@ -74,35 +120,64 @@ export default function Leadership() {
             </p>
           </div>
 
-          <div className="leadership-grid mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="leadership-grid mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {officers.map((officer) => (
               <article
                 key={`${officer.name}-${officer.position}`}
-                className="officer-card rounded-2xl border border-white/60 bg-white/40 p-6 text-blue-950 shadow-[0_24px_60px_rgba(15,23,42,0.16)] backdrop-blur-2xl transition duration-300 ease-out hover:-translate-y-1.5 hover:shadow-[0_30px_70px_rgba(15,23,42,0.2)]"
+                className="officer-card rounded-[28px] border border-white/80 bg-[#f5fbff] p-4 text-blue-950 shadow-xl shadow-blue-950/18 transition duration-300 ease-out hover:-translate-y-1.5 hover:border-[#7fffd6] hover:shadow-2xl hover:shadow-blue-950/25"
               >
-                <div className="flex flex-col items-center text-center">
-                  <div className="headshot-frame mb-6 flex h-32 w-32 items-center justify-center overflow-hidden rounded-full border border-white/70 bg-white/50 p-5 shadow-[0_18px_35px_rgba(15,23,42,0.12)] transition duration-300 ease-out">
+                <div className="flex min-h-[560px] flex-col items-center rounded-[24px] border-4 border-[#008c5a] bg-white p-4 text-center">
+                  <div className="headshot-frame mb-5 flex h-[330px] w-full max-w-[230px] items-center justify-center overflow-hidden rounded-lg border-4 border-[#d7eefb] bg-gradient-to-br from-[#e9f8ff] to-[#e7fff7] shadow-[0_18px_35px_rgba(0,119,200,0.18)] transition duration-300 ease-out">
                     <img
-                      // Ensure all photos have a similar background or color filter for consistency
-                      src="/Pictures/logos/shpe_logo.png"
-                      alt={`${officer.name} professional headshot placeholder`}
-                      className="h-full w-full object-contain"
+                      src={officer.image}
+                      alt={`${officer.name} professional headshot`}
+                      className="h-full w-full object-cover"
                     />
                   </div>
 
-                  <h2 className="text-2xl font-bold text-blue-950">
+                  <h2 className="text-2xl font-extrabold leading-tight text-blue-950">
                     {officer.name}
                   </h2>
 
-                  <div className="mt-5 h-px w-full bg-white/60" />
+                  <p className="mt-1 text-xl font-semibold text-[#008c5a]">
+                    {officer.position}
+                  </p>
 
-                  <div className="mt-5 w-full space-y-3 text-left text-sm leading-6 text-slate-800">
-                    <p>
-                      <span className="font-bold text-blue-950">
-                        Position:
-                      </span>{" "}
-                      {officer.position}
-                    </p>
+                  <div className="mt-5 flex items-center justify-center gap-3">
+                    <a
+                      href={officer.linkedin}
+                      aria-label={`${officer.name} LinkedIn`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex h-11 w-11 items-center justify-center rounded-full bg-[#0077c8] text-lg font-black text-white shadow-md shadow-blue-400/25 transition duration-300 hover:-translate-y-1 hover:bg-[#008c5a]"
+                    >
+                      in
+                    </a>
+                    <a
+                      href={`mailto:${officer.email}`}
+                      aria-label={`Email ${officer.name}`}
+                      className="flex h-11 w-11 items-center justify-center rounded-full bg-[#008c5a] text-white shadow-md shadow-green-400/25 transition duration-300 hover:-translate-y-1 hover:bg-[#0077c8]"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        viewBox="0 0 24 24"
+                        className="h-6 w-6 fill-none stroke-current stroke-2"
+                      >
+                        <path d="M4 6h16v12H4z" />
+                        <path d="m4 7 8 6 8-6" />
+                      </svg>
+                    </a>
+                  </div>
+
+                  <div className="mt-5 w-full space-y-2 border-t border-[#d7eefb] pt-4 text-left text-sm leading-6 text-slate-800">
+                    {officer.pronouns ? (
+                      <p>
+                        <span className="font-bold text-blue-950">
+                          Pronouns:
+                        </span>{" "}
+                        {officer.pronouns}
+                      </p>
+                    ) : null}
                     <p>
                       <span className="font-bold text-blue-950">Major:</span>{" "}
                       {officer.major}
@@ -113,15 +188,6 @@ export default function Leadership() {
                       </span>{" "}
                       {officer.classification}
                     </p>
-                    <p>
-                      <span className="font-bold text-blue-950">Email:</span>{" "}
-                      <a
-                        href={`mailto:${officer.email}`}
-                        className="break-words font-semibold text-blue-700 transition hover:text-orange-500"
-                      >
-                        {officer.email}
-                      </a>
-                    </p>
                   </div>
                 </div>
               </article>
@@ -129,6 +195,8 @@ export default function Leadership() {
           </div>
         </div>
       </section>
+
+      <SiteFooter />
 
       <style>{`
         @keyframes fadeSlideUp {
@@ -176,9 +244,9 @@ export default function Leadership() {
 
         .officer-card:hover .headshot-frame {
           box-shadow:
-            0 0 0 5px rgba(201, 111, 77, 0.18),
-            0 18px 44px rgba(201, 111, 77, 0.38);
-          border-color: rgba(201, 111, 77, 0.7);
+            0 0 0 5px rgba(0, 140, 90, 0.14),
+            0 18px 44px rgba(0, 119, 200, 0.28);
+          border-color: rgba(0, 140, 90, 0.7);
         }
       `}</style>
     </main>
