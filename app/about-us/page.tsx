@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SiteFooter from "../components/SiteFooter";
 
 export default function AboutUs() {
   return (
@@ -25,7 +26,7 @@ export default function AboutUs() {
       </nav>
 
       <section className="px-6 py-6 md:px-10 lg:py-8">
-        <div className="mx-auto max-w-5xl space-y-5">
+        <div className="page-reveal mx-auto max-w-5xl space-y-5">
           <div className="grid items-stretch gap-5 lg:grid-cols-2">
             <article className="flex h-[340px] flex-col justify-center rounded-lg bg-[#0067C5] p-6 text-white shadow-lg lg:h-[300px] lg:p-7">
               <h1 className="text-2xl font-bold md:text-3xl">Our Vision</h1>
@@ -68,7 +69,7 @@ export default function AboutUs() {
       </section>
 
       <section className="border-y border-[#0067C5]/20 bg-[#e7f2fc] px-6 py-12 md:px-10">
-        <div className="mx-auto max-w-5xl text-center">
+        <div className="page-reveal mx-auto max-w-5xl text-center">
           <h2 className="text-4xl font-bold text-[#f15a24]">
             Our History
           </h2>
@@ -92,7 +93,7 @@ export default function AboutUs() {
       <section className="px-6 py-14 md:px-10">
         <div className="mx-auto max-w-5xl">
           <div className="text-center">
-            <h2 className="text-4xl font-bold text-blue-950">What We Do</h2>
+            <h2 className="page-reveal text-4xl font-bold text-blue-950">What We Do</h2>
             <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-slate-600">
               SHPE TAMU-CC provides opportunities for students to grow
               professionally, serve their community, develop leadership
@@ -131,10 +132,12 @@ export default function AboutUs() {
                 image: "/Pictures/About Us Section/meeting1.jpeg",
                 alt: "SHPE members attending a general meeting",
               },
-            ].map((item) => (
+            ].map((item, index) => (
               <article
                 key={item.title}
-                className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-md transition hover:-translate-y-1 hover:shadow-xl"
+                className={`overflow-hidden rounded-lg border border-slate-200 bg-white shadow-md transition hover:-translate-y-1 hover:shadow-xl ${
+                  index % 2 === 0 ? "page-reveal-delay-1" : "page-reveal-delay-2"
+                }`}
               >
                 <img
                   src={item.image}
@@ -155,10 +158,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-      <footer className="bg-[#070832] px-6 py-8 text-center text-sm text-white/80">
-        Society of Hispanic Professional Engineers at Texas A&amp;M
-        University-Corpus Christi
-      </footer>
+      <SiteFooter />
     </main>
   );
 }
