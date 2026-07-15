@@ -1,5 +1,4 @@
-import Link from "next/link";
-import SiteFooter from "../components/SiteFooter";
+import SiteNav from "../components/SiteNav";
 
 const officers = [
   {
@@ -67,34 +66,7 @@ const officers = [
 export default function Leadership() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
-      <nav className="flex items-center gap-16 border-b border-slate-200 bg-white px-12 py-6 shadow-sm">
-        <img
-          src="/Pictures/logos/shpe_logo.png"
-          alt="SHPE TAMU-CC Logo"
-          className="h-16 w-auto"
-        />
-
-        <div className="flex gap-10 text-lg font-medium text-blue-950">
-          <Link className="transition hover:text-[#008c5a]" href="/">
-            Home
-          </Link>
-          <Link className="transition hover:text-[#008c5a]" href="/about-us">
-            About Us
-          </Link>
-          <Link className="transition hover:text-[#008c5a]" href="/leadership">
-            Leadership
-          </Link>
-          <Link className="transition hover:text-[#008c5a]" href="/membership">
-            MemberSHPE
-          </Link>
-          <Link className="transition hover:text-[#008c5a]" href="/resources">
-            Resources
-          </Link>
-          <Link className="transition hover:text-[#008c5a]" href="/sponsorship">
-            Sponsorship
-          </Link>
-        </div>
-      </nav>
+      <SiteNav />
 
       <section className="min-h-[calc(100vh-113px)] overflow-hidden bg-gradient-to-br from-[#0077c8] via-[#1887d4] to-[#008c5a] px-10 py-16">
         <div className="mx-auto max-w-6xl">
@@ -195,8 +167,6 @@ export default function Leadership() {
           </div>
         </div>
       </section>
-
-      <SiteFooter />
 
       <style>{`
         @keyframes fadeSlideUp {

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import SiteFooter from "../components/SiteFooter";
 
 const resources = [
   {
@@ -181,8 +180,6 @@ export default function Resources() {
           ))}
         </div>
       </section>
-
-      <SiteFooter />
     </main>
   );
 }

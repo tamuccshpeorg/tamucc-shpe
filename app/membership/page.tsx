@@ -1,4 +1,4 @@
-﻿import SiteNav from "../components/SiteNav";
+import SiteNav from "../components/SiteNav";
 
 const nationalMembershipUrl = "https://shpe.org/membership/become-a-member/";
 
@@ -32,34 +32,45 @@ export default function Membership() {
     <main className="min-h-screen bg-[#fbf5ec] text-slate-900">
       <SiteNav />
 
-      <section className="flex min-h-[calc(100vh-140px)] items-center bg-[#d7edf6] px-6 py-20 md:px-10 lg:py-24">
-        <div className="mx-auto grid w-full max-w-7xl items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
+      <section className="relative flex min-h-[calc(100vh-105px)] items-center overflow-hidden bg-[#eef9fc] px-6 py-16 md:px-10 lg:py-20">
+        <div className="pointer-events-none absolute left-10 top-12 h-28 w-28 rounded-full border border-[#b9e6f1]" />
+        <div className="pointer-events-none absolute bottom-10 right-12 grid grid-cols-4 gap-3 opacity-35">
+          {[...Array(16)].map((_, index) => (
+            <span key={index} className="h-2 w-2 rounded-full bg-[#7cc5d7]" />
+          ))}
+        </div>
+        <div className="pointer-events-none absolute bottom-0 left-0 h-24 w-full bg-[linear-gradient(135deg,transparent_35%,rgba(124,197,215,0.22)_35%,rgba(124,197,215,0.22)_48%,transparent_48%)]" />
+
+        <div className="relative mx-auto grid w-full max-w-7xl items-center gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <article>
-            <h1 className="font-serif text-5xl font-extrabold leading-tight text-blue-950 md:text-6xl lg:text-7xl">
+            <h1 className="font-serif text-5xl font-extrabold leading-none text-[#071a44] md:text-6xl lg:text-7xl">
               Bienvenidos
               <br />
-              <span className="font-sans text-4xl font-medium text-slate-950 md:text-5xl lg:text-6xl">
+              <span className="mt-4 block font-sans text-3xl font-medium text-[#071a44] md:text-4xl lg:text-5xl">
                 to the familia!
               </span>
             </h1>
-            <p className="mt-10 max-w-3xl text-xl leading-9 text-slate-800 md:text-2xl md:leading-10">
+            <span className="mt-7 block h-1.5 w-24 rounded-full bg-[#f26b2c]" />
+            <p className="mt-9 max-w-2xl text-lg leading-8 text-[#071a44]/85 md:text-xl md:leading-9">
               SHPE TAMU-CC is a community for students who want to grow
               academically, professionally, and socially. Whether you are
               Hispanic, an engineer, or simply interested in STEM, you are
-              welcome to join and take advantage of opportunities at the
-              local and national levels.
+              welcome to join and take advantage of opportunities at both the
+              local and national level.
             </p>
-            <p className="mt-10 font-serif text-2xl italic leading-9 text-blue-950 md:text-3xl">
-              Keep scrolling to learn more about MemberSHPE.
-            </p>
+            <div className="mt-10 border-l-4 border-[#0067C5] pl-5">
+              <p className="font-serif text-xl italic leading-8 text-[#071a44] md:text-2xl">
+                Keep scrolling to learn more about MemberSHPE.
+              </p>
+            </div>
 
           </article>
 
-          <div className="overflow-hidden rounded-2xl shadow-2xl">
+          <div className="overflow-hidden rounded-[28px] shadow-[0_26px_70px_rgba(7,26,68,0.2)]">
             <img
               src="/MemberSHPE/big event group.jpeg"
               alt="SHPE TAMU-CC members at a meeting"
-              className="h-[360px] w-full object-cover md:h-[520px] lg:h-[560px]"
+              className="h-[360px] w-full object-cover md:h-[520px] lg:h-[590px]"
             />
           </div>
         </div>
@@ -223,8 +234,6 @@ export default function Membership() {
           </div>
         </div>
       </section>
-
     </main>
   );
 }
-
