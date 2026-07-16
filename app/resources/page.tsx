@@ -180,6 +180,7 @@ export default function Resources() {
           ))}
         </div>
       </section>
+
     </main>
   );
 }
