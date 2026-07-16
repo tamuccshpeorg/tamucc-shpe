@@ -12,11 +12,11 @@ const officers = [
     image: "/Pictures/Leadership/lucero-robles-aguirre.jpeg",
   },
   {
-    name: "Samuel Mack",
+    name: "Samuel Allen Mack",
     position: "Vice President",
-    pronouns: "",
-    major: "[Major]",
-    classification: "[Year]",
+    pronouns: "he/him/his",
+    major: "Mechanical Engineering",
+    classification: "Senior",
     email: "smack2@islander.tamucc.edu",
     linkedin: "https://www.linkedin.com/in/samuel-mack-80b38a40b/",
     image: "/Pictures/logos/shpe_logo.png",
@@ -24,19 +24,19 @@ const officers = [
   {
     name: "Andres Dwindt",
     position: "Treasurer",
-    pronouns: "",
-    major: "[Major]",
-    classification: "[Year]",
+    pronouns: "he/him",
+    major: "Mechanical Engineering",
+    classification: "Senior",
     email: "adwindt@islander.tamucc.edu",
     linkedin: "https://www.linkedin.com/in/andres-dwindt-760902305/",
     image: "/Pictures/logos/shpe_logo.png",
   },
   {
-    name: "Karina Lugardo",
-    position: "Director of Fundraising",
-    pronouns: "",
-    major: "[Major]",
-    classification: "[Year]",
+    name: "Karina Lugardo Sanchez",
+    position: "Fundraising Coordinator",
+    pronouns: "She/Her",
+    major: "Mechanical Engineering",
+    classification: "Junior",
     email: "klugardo@islander.tamucc.edu",
     linkedin: "https://www.linkedin.com/in/karinalugardo/",
     image: "/Pictures/logos/shpe_logo.png",
@@ -44,21 +44,31 @@ const officers = [
   {
     name: "Joshua Gonzalez",
     position: "Director of Outreach",
-    pronouns: "",
-    major: "[Major]",
-    classification: "[Year]",
+    pronouns: "he/him",
+    major: "Mechanical Engineering",
+    classification: "Senior",
     email: "jgonzalez212@islander.tamucc.edu",
     linkedin: "https://www.linkedin.com/in/joshua-gonzalez-2a3302383/",
     image: "/Pictures/logos/shpe_logo.png",
   },
   {
-    name: "Michael Mendez",
+    name: "Michael Mario Mendez",
     position: "Director of Marketing",
-    pronouns: "",
-    major: "[Major]",
-    classification: "[Year]",
+    pronouns: "he/him",
+    major: "Computer Science",
+    classification: "",
     email: "mmendez30@islander.tamucc.edu",
     linkedin: "https://www.linkedin.com/in/michael-m-mendez/",
+    image: "/Pictures/logos/shpe_logo.png",
+  },
+  {
+    name: "Jose Baquero",
+    position: "Engineering Student Advisor",
+    pronouns: "he/him/his",
+    major: "Mechanical Engineering",
+    classification: "Senior",
+    email: "jbaqueroovalle@islander.tamucc.edu",
+    linkedin: "https://www.linkedin.com/in/josedbaquero",
     image: "/Pictures/logos/shpe_logo.png",
   },
 ];
@@ -95,8 +105,8 @@ export default function Leadership() {
         </div>
       </nav>
 
-      <section className="min-h-[calc(100vh-113px)] overflow-hidden bg-gradient-to-br from-[#0077c8] via-[#1887d4] to-[#008c5a] px-10 py-16">
-        <div className="mx-auto max-w-6xl">
+      <section className="min-h-[calc(100vh-113px)] overflow-hidden bg-gradient-to-br from-[#0077c8] via-[#1887d4] to-[#008c5a] px-6 py-10 md:px-10">
+        <div className="mx-auto max-w-7xl">
           <div className="leadership-intro max-w-4xl">
             <p className="mb-4 text-lg font-semibold uppercase tracking-[0.45em] text-white">
               Leadership
@@ -108,7 +118,7 @@ export default function Leadership() {
 
             <div className="mt-6 h-0.5 w-20 bg-white" />
 
-            <p className="mt-6 text-lg font-semibold leading-8 text-white md:text-xl">
+            <p className="mt-5 text-base font-semibold leading-7 text-white md:text-lg">
               At TAMUCC, the SHPE Executive Board bridges academic excellence
               with lifelong professional opportunity. Grounded in our core
               values of Familia, Service, Education, and Resilience, our
@@ -119,14 +129,14 @@ export default function Leadership() {
             </p>
           </div>
 
-          <div className="leadership-grid mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="leadership-grid mt-8 flex flex-wrap justify-center gap-5">
             {officers.map((officer) => (
               <article
                 key={`${officer.name}-${officer.position}`}
-                className="officer-card rounded-[28px] border border-white/80 bg-[#f5fbff] p-4 text-blue-950 shadow-xl shadow-blue-950/18 transition duration-300 ease-out hover:-translate-y-1.5 hover:border-[#7fffd6] hover:shadow-2xl hover:shadow-blue-950/25"
+                className="officer-card w-full rounded-[22px] border border-white/80 bg-[#f5fbff] p-3 text-blue-950 shadow-xl shadow-blue-950/18 transition duration-300 ease-out hover:-translate-y-1.5 hover:border-[#7fffd6] hover:shadow-2xl hover:shadow-blue-950/25 sm:w-[calc((100%-1.25rem)/2)] lg:w-[calc((100%-3.75rem)/4)]"
               >
-                <div className="flex min-h-[560px] flex-col items-center rounded-[24px] border-4 border-[#008c5a] bg-white p-4 text-center">
-                  <div className="headshot-frame mb-5 flex h-[330px] w-full max-w-[230px] items-center justify-center overflow-hidden rounded-lg border-4 border-[#d7eefb] bg-gradient-to-br from-[#e9f8ff] to-[#e7fff7] shadow-[0_18px_35px_rgba(0,119,200,0.18)] transition duration-300 ease-out">
+                <div className="flex min-h-[430px] flex-col items-center rounded-[18px] border-[3px] border-[#008c5a] bg-white p-3 text-center">
+                  <div className="headshot-frame mb-3 flex h-[210px] w-full max-w-[180px] items-center justify-center overflow-hidden rounded-lg border-[3px] border-[#d7eefb] bg-gradient-to-br from-[#e9f8ff] to-[#e7fff7] shadow-[0_14px_28px_rgba(0,119,200,0.18)] transition duration-300 ease-out">
                     <img
                       src={officer.image}
                       alt={`${officer.name} professional headshot`}
@@ -134,33 +144,33 @@ export default function Leadership() {
                     />
                   </div>
 
-                  <h2 className="text-2xl font-extrabold leading-tight text-blue-950">
+                  <h2 className="text-xl font-extrabold leading-tight text-blue-950">
                     {officer.name}
                   </h2>
 
-                  <p className="mt-1 text-xl font-semibold text-[#008c5a]">
+                  <p className="mt-1 text-base font-semibold text-[#008c5a]">
                     {officer.position}
                   </p>
 
-                  <div className="mt-5 flex items-center justify-center gap-3">
+                  <div className="mt-3 flex items-center justify-center gap-3">
                     <a
                       href={officer.linkedin}
                       aria-label={`${officer.name} LinkedIn`}
                       target="_blank"
                       rel="noreferrer"
-                      className="flex h-11 w-11 items-center justify-center rounded-full bg-[#0077c8] text-lg font-black text-white shadow-md shadow-blue-400/25 transition duration-300 hover:-translate-y-1 hover:bg-[#008c5a]"
+                      className="flex h-9 w-9 items-center justify-center rounded-full bg-[#0077c8] text-base font-black text-white shadow-md shadow-blue-400/25 transition duration-300 hover:-translate-y-1 hover:bg-[#008c5a]"
                     >
                       in
                     </a>
                     <a
                       href={`mailto:${officer.email}`}
                       aria-label={`Email ${officer.name}`}
-                      className="flex h-11 w-11 items-center justify-center rounded-full bg-[#008c5a] text-white shadow-md shadow-green-400/25 transition duration-300 hover:-translate-y-1 hover:bg-[#0077c8]"
+                      className="flex h-9 w-9 items-center justify-center rounded-full bg-[#008c5a] text-white shadow-md shadow-green-400/25 transition duration-300 hover:-translate-y-1 hover:bg-[#0077c8]"
                     >
                       <svg
                         aria-hidden="true"
                         viewBox="0 0 24 24"
-                        className="h-6 w-6 fill-none stroke-current stroke-2"
+                        className="h-5 w-5 fill-none stroke-current stroke-2"
                       >
                         <path d="M4 6h16v12H4z" />
                         <path d="m4 7 8 6 8-6" />
@@ -168,7 +178,7 @@ export default function Leadership() {
                     </a>
                   </div>
 
-                  <div className="mt-5 w-full space-y-2 border-t border-[#d7eefb] pt-4 text-left text-sm leading-6 text-slate-800">
+                  <div className="mt-3 w-full space-y-1 border-t border-[#d7eefb] pt-3 text-left text-xs leading-5 text-slate-800">
                     {officer.pronouns ? (
                       <p>
                         <span className="font-bold text-blue-950">
@@ -181,12 +191,14 @@ export default function Leadership() {
                       <span className="font-bold text-blue-950">Major:</span>{" "}
                       {officer.major}
                     </p>
-                    <p>
-                      <span className="font-bold text-blue-950">
-                        Classification:
-                      </span>{" "}
-                      {officer.classification}
-                    </p>
+                    {officer.classification ? (
+                      <p>
+                        <span className="font-bold text-blue-950">
+                          Classification:
+                        </span>{" "}
+                        {officer.classification}
+                      </p>
+                    ) : null}
                   </div>
                 </div>
               </article>
@@ -237,6 +249,10 @@ export default function Leadership() {
 
         .officer-card:nth-child(6) {
           animation-delay: 0.6s;
+        }
+
+        .officer-card:nth-child(7) {
+          animation-delay: 0.7s;
         }
 
         .officer-card:hover .headshot-frame {
