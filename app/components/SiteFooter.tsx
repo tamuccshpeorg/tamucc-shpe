@@ -30,7 +30,7 @@ export default function SiteFooter() {
           <h2 className="text-xl font-bold">Follow us on Social Media</h2>
           <div className="mt-5 flex justify-center gap-4">
             <a
-              href="https://www.facebook.com/"
+              href="https://www.facebook.com/profile.php?id=61592136180326"
               target="_blank"
               rel="noreferrer"
               aria-label="Facebook"
@@ -41,7 +41,7 @@ export default function SiteFooter() {
               </svg>
             </a>
             <a
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/company/society-of-hispanic-professional-engineers-shpe-tamu-cc/"
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"

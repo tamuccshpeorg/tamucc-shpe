@@ -1,31 +1,12 @@
-import Link from "next/link";
+import SiteNav from "../components/SiteNav";
 
 export default function AboutUs() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
-      <nav className="flex flex-wrap items-center gap-8 border-b bg-white px-6 py-5 shadow-sm md:px-12 lg:gap-16">
-        <Link href="/" aria-label="SHPE TAMU-CC home">
-          <img
-            src="/Pictures/logos/shpe_logo.png"
-            alt="SHPE TAMU-CC Logo"
-            className="h-14 w-auto md:h-16"
-          />
-        </Link>
-
-        <div className="flex flex-wrap gap-x-7 gap-y-3 text-base font-medium text-blue-950 md:text-lg lg:gap-x-10">
-          <Link href="/">Home</Link>
-          <Link href="/about-us" className="font-bold text-[#0067C5]">
-            About Us
-          </Link>
-          <Link href="/leadership">Leadership</Link>
-          <Link href="/membership">MemberSHPE</Link>
-          <Link href="/resources">Resources</Link>
-          <Link href="/sponsorship">Sponsorship</Link>
-        </div>
-      </nav>
+      <SiteNav />
 
       <section className="px-6 py-6 md:px-10 lg:py-8">
-        <div className="page-reveal mx-auto max-w-5xl space-y-5">
+        <div className="mx-auto max-w-5xl space-y-5">
           <div className="grid items-stretch gap-5 lg:grid-cols-2">
             <article className="flex h-[340px] flex-col justify-center rounded-lg bg-[#0067C5] p-6 text-white shadow-lg lg:h-[300px] lg:p-7">
               <h1 className="text-2xl font-bold md:text-3xl">Our Vision</h1>
@@ -48,8 +29,8 @@ export default function AboutUs() {
           <div className="grid items-stretch gap-5 lg:grid-cols-2">
             <div className="h-[340px] overflow-hidden rounded-lg shadow-lg lg:h-[300px]">
               <img
-                src="/Pictures/About Us Section/workshop winners.jpeg"
-                alt="SHPE workshop winners"
+                src="/Pictures/About Us Section/orgfest2.jpeg"
+                alt="SHPE members at OrgFest"
                 className="h-full w-full object-cover"
               />
             </div>
@@ -68,7 +49,7 @@ export default function AboutUs() {
       </section>
 
       <section className="border-y border-[#0067C5]/20 bg-[#e7f2fc] px-6 py-12 md:px-10">
-        <div className="page-reveal mx-auto max-w-5xl text-center">
+        <div className="mx-auto max-w-5xl text-center">
           <h2 className="text-4xl font-bold text-[#f15a24]">
             Our History
           </h2>
@@ -92,7 +73,7 @@ export default function AboutUs() {
       <section className="px-6 py-14 md:px-10">
         <div className="mx-auto max-w-5xl">
           <div className="text-center">
-            <h2 className="page-reveal text-4xl font-bold text-blue-950">What We Do</h2>
+            <h2 className="text-4xl font-bold text-blue-950">What We Do</h2>
             <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-slate-600">
               SHPE TAMU-CC provides opportunities for students to grow
               professionally, serve their community, develop leadership
@@ -107,8 +88,8 @@ export default function AboutUs() {
                 title: "Professional Development",
                 description:
                   "Members develop career-ready skills through resume and LinkedIn workshops, internship panels, networking events, company presentations, and professional development sessions.",
-                image: "/Pictures/About Us Section/workshop winners.jpeg",
-                alt: "SHPE members at a professional development workshop",
+                image: "/Pictures/About Us Section/National Convention Duo .jpeg",
+                alt: "SHPE members at the national convention",
               },
               {
                 title: "Community Outreach",
@@ -131,12 +112,10 @@ export default function AboutUs() {
                 image: "/Pictures/About Us Section/meeting1.jpeg",
                 alt: "SHPE members attending a general meeting",
               },
-            ].map((item, index) => (
+            ].map((item) => (
               <article
                 key={item.title}
-                className={`overflow-hidden rounded-lg border border-slate-200 bg-white shadow-md transition hover:-translate-y-1 hover:shadow-xl ${
-                  index % 2 === 0 ? "page-reveal-delay-1" : "page-reveal-delay-2"
-                }`}
+                className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-md transition hover:-translate-y-1 hover:shadow-xl"
               >
                 <img
                   src={item.image}
@@ -156,7 +135,6 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
-
     </main>
   );
 }

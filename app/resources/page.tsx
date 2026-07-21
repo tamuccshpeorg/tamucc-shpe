@@ -1,4 +1,4 @@
-import Link from "next/link";
+import SiteNav from "../components/SiteNav";
 
 const resources = [
   {
@@ -91,36 +91,9 @@ const resources = [
 export default function Resources() {
   return (
     <main className="min-h-screen bg-[#f5fbff] text-slate-900">
-      <nav className="flex items-center gap-16 border-b border-slate-200 bg-white px-12 py-6 shadow-sm">
-        <img
-          src="/Pictures/logos/shpe_logo.png"
-          alt="SHPE TAMU-CC Logo"
-          className="h-16 w-auto"
-        />
+      <SiteNav />
 
-        <div className="flex gap-10 text-lg font-medium text-blue-950">
-          <Link className="transition hover:text-[#008c5a]" href="/">
-            Home
-          </Link>
-          <Link className="transition hover:text-[#008c5a]" href="/about-us">
-            About Us
-          </Link>
-          <Link className="transition hover:text-[#008c5a]" href="/leadership">
-            Leadership
-          </Link>
-          <Link className="transition hover:text-[#008c5a]" href="/membership">
-            MemberSHPE
-          </Link>
-          <Link className="font-bold text-[#008c5a]" href="/resources">
-            Resources
-          </Link>
-          <Link className="transition hover:text-[#008c5a]" href="/sponsorship">
-            Sponsorship
-          </Link>
-        </div>
-      </nav>
-
-      <section className="overflow-hidden bg-gradient-to-br from-[#0077c8] via-[#1887d4] to-[#008c5a] px-6 py-10 md:px-10">
+      <section className="overflow-hidden bg-gradient-to-br from-[#0067c5] via-[#1d7fd0] to-[#001f5b] px-6 py-10 md:px-10">
         <div className="page-reveal mx-auto max-w-6xl">
           <p className="mb-4 text-lg font-semibold uppercase tracking-[0.45em] text-white">
             Resources
@@ -139,11 +112,11 @@ export default function Resources() {
           {resources.map((resource, index) => (
             <article
               key={resource.title}
-              className={`w-full rounded-[22px] border border-white/80 bg-white p-3 text-blue-950 shadow-xl shadow-blue-950/10 transition duration-300 ease-out hover:-translate-y-1.5 hover:border-[#7fffd6] hover:shadow-2xl hover:shadow-blue-950/20 md:w-[calc((100%-1.25rem)/2)] lg:w-[calc((100%-2.5rem)/3)] ${
+              className={`w-full rounded-[22px] border border-white/80 bg-white p-3 text-blue-950 shadow-xl shadow-blue-950/10 transition duration-300 ease-out hover:-translate-y-1.5 hover:border-[#f26b2c]/80 hover:shadow-2xl hover:shadow-blue-950/20 md:w-[calc((100%-1.25rem)/2)] lg:w-[calc((100%-2.5rem)/3)] ${
                 index % 2 === 0 ? "page-reveal-delay-1" : "page-reveal-delay-2"
               }`}
             >
-              <div className="flex h-full flex-col overflow-hidden rounded-[18px] border-[3px] border-[#008c5a] bg-white">
+              <div className="flex h-full flex-col overflow-hidden rounded-[18px] border-[3px] border-[#0067c5] bg-white">
                 <div className="h-44 overflow-hidden border-b-[3px] border-[#d7eefb] bg-[#e9f8ff] sm:h-48">
                   <img
                     src={resource.image}
@@ -153,7 +126,7 @@ export default function Resources() {
                 </div>
 
                 <div className="flex flex-1 flex-col p-4">
-                  <p className="text-sm font-extrabold uppercase tracking-[0.28em] text-[#008c5a]">
+                  <p className="text-sm font-extrabold uppercase tracking-[0.28em] text-[#f26b2c]">
                     {resource.label}
                   </p>
 
@@ -168,7 +141,7 @@ export default function Resources() {
                         href={link.href}
                         target="_blank"
                         rel="noreferrer"
-                        className="flex min-h-10 items-center justify-center rounded-xl bg-blue-950 px-3 py-2 text-center text-xs font-bold text-white shadow-md shadow-blue-950/20 transition duration-300 hover:-translate-y-1 hover:bg-[#008c5a] hover:shadow-lg hover:shadow-green-500/20"
+                        className="flex min-h-10 items-center justify-center rounded-xl bg-blue-950 px-3 py-2 text-center text-xs font-bold text-white shadow-md shadow-blue-950/20 transition duration-300 hover:-translate-y-1 hover:bg-[#f26b2c] hover:shadow-lg hover:shadow-orange-500/20"
                       >
                         {link.text}
                       </a>
