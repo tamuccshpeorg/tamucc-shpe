@@ -1,4 +1,4 @@
-import Link from "next/link";
+import SiteNav from "../components/SiteNav";
 
 const officers = [
   {
@@ -73,52 +73,32 @@ const officers = [
   },
 ];
 
+const getInitials = (name: string) =>
+  name
+    .split(" ")
+    .map((part) => part[0])
+    .join("")
+    .toUpperCase();
+
 export default function Leadership() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
-      <nav className="flex items-center gap-16 border-b border-slate-200 bg-white px-12 py-6 shadow-sm">
-        <img
-          src="/Pictures/logos/shpe_logo.png"
-          alt="SHPE TAMU-CC Logo"
-          className="h-16 w-auto"
-        />
+      <SiteNav />
 
-        <div className="flex gap-10 text-lg font-medium text-blue-950">
-          <Link className="transition hover:text-[#008c5a]" href="/">
-            Home
-          </Link>
-          <Link className="transition hover:text-[#008c5a]" href="/about-us">
-            About Us
-          </Link>
-          <Link className="transition hover:text-[#008c5a]" href="/leadership">
-            Leadership
-          </Link>
-          <Link className="transition hover:text-[#008c5a]" href="/membership">
-            MemberSHPE
-          </Link>
-          <Link className="transition hover:text-[#008c5a]" href="/resources">
-            Resources
-          </Link>
-          <Link className="transition hover:text-[#008c5a]" href="/sponsorship">
-            Sponsorship
-          </Link>
-        </div>
-      </nav>
-
-      <section className="min-h-[calc(100vh-113px)] overflow-hidden bg-gradient-to-br from-[#0077c8] via-[#1887d4] to-[#008c5a] px-6 py-10 md:px-10">
+      <section className="min-h-[calc(100vh-113px)] overflow-hidden bg-gradient-to-br from-[#0067c5] via-[#1d7fd0] to-[#001f5b] px-5 py-7 md:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="leadership-intro max-w-4xl">
-            <p className="mb-4 text-lg font-semibold uppercase tracking-[0.45em] text-white">
+            <p className="mb-3 text-base font-semibold uppercase tracking-[0.45em] text-white">
               Leadership
             </p>
 
-            <h1 className="font-serif text-4xl font-bold uppercase leading-[1.05] text-white md:text-5xl lg:text-5xl">
+            <h1 className="font-serif text-3xl font-bold uppercase leading-[1.05] text-white md:text-4xl lg:text-[2.65rem]">
               SHPE TAMUCC Officers
             </h1>
 
-            <div className="mt-6 h-0.5 w-20 bg-white" />
+            <div className="mt-4 h-0.5 w-16 bg-white" />
 
-            <p className="mt-5 text-base font-semibold leading-7 text-white md:text-lg">
+            <p className="mt-4 max-w-5xl text-sm font-semibold leading-6 text-white md:text-base">
               At TAMUCC, the SHPE Executive Board bridges academic excellence
               with lifelong professional opportunity. Grounded in our core
               values of Familia, Service, Education, and Resilience, our
@@ -129,43 +109,41 @@ export default function Leadership() {
             </p>
           </div>
 
-          <div className="leadership-grid mt-8 flex flex-wrap justify-center gap-5">
+          <div className="leadership-grid mt-7 flex flex-wrap justify-center gap-5">
             {officers.map((officer) => (
               <article
                 key={`${officer.name}-${officer.position}`}
-                className="officer-card w-full rounded-[22px] border border-white/80 bg-[#f5fbff] p-3 text-blue-950 shadow-xl shadow-blue-950/18 transition duration-300 ease-out hover:-translate-y-1.5 hover:border-[#7fffd6] hover:shadow-2xl hover:shadow-blue-950/25 sm:w-[calc((100%-1.25rem)/2)] lg:w-[calc((100%-3.75rem)/4)]"
+                className="officer-card w-full rounded-[22px] border border-white/80 bg-[#f5fbff] p-3 text-blue-950 shadow-xl shadow-blue-950/18 transition duration-300 ease-out hover:-translate-y-1 hover:border-[#f26b2c]/80 hover:shadow-2xl hover:shadow-blue-950/25 sm:w-[calc((100%-1.25rem)/2)] lg:w-[calc((100%-3.75rem)/4)]"
               >
-                <div className="flex min-h-[430px] flex-col items-center rounded-[18px] border-[3px] border-[#008c5a] bg-white p-3 text-center">
-                  <div className="headshot-frame mb-3 flex h-[210px] w-full max-w-[180px] items-center justify-center overflow-hidden rounded-lg border-[3px] border-[#d7eefb] bg-gradient-to-br from-[#e9f8ff] to-[#e7fff7] shadow-[0_14px_28px_rgba(0,119,200,0.18)] transition duration-300 ease-out">
-                    <img
-                      src={officer.image}
-                      alt={`${officer.name} professional headshot`}
-                      className="h-full w-full object-cover"
-                    />
+                <div className="flex min-h-[355px] flex-col items-center rounded-[18px] border-[3px] border-[#0067c5] bg-white p-4 text-center">
+                  <div className="headshot-frame mb-4 flex h-28 w-28 items-center justify-center rounded-full border-[3px] border-[#f26b2c]/30 bg-white shadow-[0_14px_28px_rgba(0,31,91,0.16)] transition duration-300 ease-out">
+                    <span className="text-4xl font-black tracking-wide text-[#f26b2c]">
+                      {getInitials(officer.name)}
+                    </span>
                   </div>
 
-                  <h2 className="text-xl font-extrabold leading-tight text-blue-950">
+                  <h2 className="text-xl font-extrabold leading-tight text-blue-950 xl:text-[1.35rem]">
                     {officer.name}
                   </h2>
 
-                  <p className="mt-1 text-base font-semibold text-[#008c5a]">
+                  <p className="mt-1 text-base font-semibold leading-tight text-[#0067c5]">
                     {officer.position}
                   </p>
 
-                  <div className="mt-3 flex items-center justify-center gap-3">
+                  <div className="mt-4 flex items-center justify-center gap-3">
                     <a
                       href={officer.linkedin}
                       aria-label={`${officer.name} LinkedIn`}
                       target="_blank"
                       rel="noreferrer"
-                      className="flex h-9 w-9 items-center justify-center rounded-full bg-[#0077c8] text-base font-black text-white shadow-md shadow-blue-400/25 transition duration-300 hover:-translate-y-1 hover:bg-[#008c5a]"
+                      className="flex h-10 w-10 items-center justify-center rounded-full bg-[#0067c5] text-base font-black text-white shadow-md shadow-blue-400/25 transition duration-300 hover:-translate-y-1 hover:bg-[#f26b2c]"
                     >
                       in
                     </a>
                     <a
                       href={`mailto:${officer.email}`}
                       aria-label={`Email ${officer.name}`}
-                      className="flex h-9 w-9 items-center justify-center rounded-full bg-[#008c5a] text-white shadow-md shadow-green-400/25 transition duration-300 hover:-translate-y-1 hover:bg-[#0077c8]"
+                      className="flex h-10 w-10 items-center justify-center rounded-full bg-[#001f5b] text-white shadow-md shadow-blue-950/25 transition duration-300 hover:-translate-y-1 hover:bg-[#f26b2c]"
                     >
                       <svg
                         aria-hidden="true"
@@ -178,7 +156,7 @@ export default function Leadership() {
                     </a>
                   </div>
 
-                  <div className="mt-3 w-full space-y-1 border-t border-[#d7eefb] pt-3 text-left text-xs leading-5 text-slate-800">
+                  <div className="mt-4 w-full space-y-1 border-t border-[#d7eefb] pt-4 text-left text-sm leading-5 text-slate-800">
                     {officer.pronouns ? (
                       <p>
                         <span className="font-bold text-blue-950">
