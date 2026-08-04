@@ -5,8 +5,8 @@ export default function AboutUs() {
     <main className="min-h-screen bg-white text-slate-900">
       <SiteNav />
 
-      <section className="px-6 py-6 md:px-10 lg:py-8">
-        <div className="mx-auto max-w-5xl space-y-5">
+      <section className="page-reveal px-6 py-6 md:px-10 lg:py-8">
+        <div className="page-shell mx-auto max-w-5xl space-y-5 rounded-[30px] p-4 md:p-5">
           <div className="grid items-stretch gap-5 lg:grid-cols-2">
             <article className="flex h-[340px] flex-col justify-center rounded-[24px] bg-[linear-gradient(135deg,#0b6db4_0%,#005faa_100%)] p-6 text-white shadow-[0_18px_40px_rgba(0,103,197,0.18)] lg:h-[300px] lg:p-7">
               <h1 className="text-2xl font-bold md:text-3xl">Our Vision</h1>
@@ -48,7 +48,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-      <section className="border-y border-[#0067C5]/20 bg-[#e7f2fc] px-6 py-12 md:px-10">
+      <section className="page-reveal-delay-1 border-y border-[#86dbc6]/70 bg-[#e7f2fc] px-6 py-12 md:px-10">
         <div className="mx-auto max-w-5xl text-center">
           <h2 className="text-4xl font-bold text-[#0f2f57]">
             Our History
@@ -70,7 +70,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-      <section className="px-6 py-14 md:px-10">
+      <section className="page-reveal-delay-2 px-6 py-14 md:px-10">
         <div className="mx-auto max-w-5xl">
           <div className="text-center">
             <h2 className="text-4xl font-bold text-[#0f2f57]">What We Do</h2>

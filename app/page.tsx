@@ -78,7 +78,7 @@ export default function Home() {
     <main className="min-h-screen bg-white text-slate-900">
       <SiteNav />
 
-      <section className="min-h-[calc(100vh-113px)] bg-[linear-gradient(135deg,#0b4f7b_0%,#0d73a8_48%,#17a7ab_100%)] px-12 py-10">
+      <section className="page-reveal min-h-[calc(100vh-113px)] bg-[linear-gradient(135deg,#0b4f7b_0%,#0d73a8_48%,#17a7ab_100%)] px-12 py-10">
         <div className="mx-auto grid h-full max-w-6xl items-center gap-6 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="flex flex-col items-center text-center">
             <p className="mb-4 text-lg font-semibold uppercase tracking-[0.45em] text-white/95">
@@ -120,7 +120,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-10 py-12">
+      <section className="page-reveal-delay-1 px-10 py-12">
         <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-2 lg:gap-14">
           <div className="flex flex-col rounded-[28px] bg-[linear-gradient(180deg,#ffffff_0%,#eff9fd_100%)] p-6 text-[#0f2f57] shadow-[0_20px_50px_rgba(15,47,87,0.12)]">
             <h2 className="mb-5 text-center text-3xl font-bold">
@@ -186,7 +186,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-10 py-24">
+      <section className="page-reveal-delay-2 px-10 py-24">
         <h2 className="mb-8 text-4xl font-bold text-[#0f2f57]">
           Our Google Calendar
         </h2>

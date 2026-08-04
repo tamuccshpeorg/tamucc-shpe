@@ -32,7 +32,7 @@ export default function Membership() {
     <main className="min-h-screen bg-[#fbf5ec] text-slate-900">
       <SiteNav />
 
-      <section className="relative flex min-h-[calc(100vh-105px)] items-center overflow-hidden bg-[linear-gradient(180deg,#f4fbff_0%,#edf8fc_100%)] px-6 py-16 md:px-10 lg:py-20">
+      <section className="page-reveal relative flex min-h-[calc(100vh-105px)] items-center overflow-hidden bg-[linear-gradient(180deg,#f4fbff_0%,#edf8fc_100%)] px-6 py-16 md:px-10 lg:py-20">
         <div className="pointer-events-none absolute left-10 top-12 h-28 w-28 rounded-full border border-[#b9e6f1]" />
         <div className="pointer-events-none absolute bottom-10 right-12 grid grid-cols-4 gap-3 opacity-35">
           {[...Array(16)].map((_, index) => (
@@ -41,7 +41,7 @@ export default function Membership() {
         </div>
         <div className="pointer-events-none absolute bottom-0 left-0 h-24 w-full bg-[linear-gradient(135deg,transparent_35%,rgba(124,197,215,0.22)_35%,rgba(124,197,215,0.22)_48%,transparent_48%)]" />
 
-        <div className="relative mx-auto grid w-full max-w-7xl items-center gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+        <div className="page-shell relative mx-auto grid w-full max-w-7xl items-center gap-14 rounded-[32px] p-6 md:p-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 lg:p-10">
           <article>
             <h1 className="font-serif text-5xl font-extrabold leading-none text-[#071a44] md:text-6xl lg:text-7xl">
               Bienvenidos
@@ -76,7 +76,7 @@ export default function Membership() {
         </div>
       </section>
 
-      <section id="join-committee" className="bg-white px-6 py-16 md:px-10">
+      <section id="join-committee" className="page-reveal-delay-1 bg-white px-6 py-16 md:px-10">
         <div className="mx-auto max-w-6xl">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold text-[#0f2f57] md:text-4xl">
@@ -124,7 +124,7 @@ export default function Membership() {
         </div>
       </section>
 
-      <section className="flex min-h-[calc(100vh-90px)] items-center bg-white px-6 py-10 md:px-10">
+      <section className="page-reveal-delay-2 flex min-h-[calc(100vh-90px)] items-center bg-white px-6 py-10 md:px-10">
         <div className="mx-auto grid w-full max-w-7xl gap-10 border border-slate-100 bg-white p-8 shadow-[0_22px_70px_rgba(15,23,42,0.08)] lg:grid-cols-[0.9fr_1.1fr] lg:p-12">
           <article className="flex flex-col justify-center">
             <h2 className="font-serif text-5xl font-black leading-none text-[#0f2f57] md:text-6xl">
@@ -186,7 +186,7 @@ export default function Membership() {
           </div>
         </div>
       </section>
-      <section className="bg-white px-3 py-16 md:px-6">
+      <section className="page-reveal-delay-1 bg-white px-3 py-16 md:px-6">
         <div className="relative mx-auto min-h-[760px] max-w-[96rem] overflow-hidden rounded-sm shadow-2xl">
           <img
             src="/MemberSHPE/SHPE National.jpeg"

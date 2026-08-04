@@ -31,6 +31,35 @@ body {
   font-family: var(--font-sans);
 }
 
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-reveal {
+  animation: fadeSlideUp 0.75s ease-out both;
+}
+
+.page-reveal-delay-1 {
+  animation: fadeSlideUp 0.8s ease-out 0.08s both;
+}
+
+.page-reveal-delay-2 {
+  animation: fadeSlideUp 0.8s ease-out 0.16s both;
+}
+
+.page-shell {
+  border: 1px solid rgba(91, 200, 185, 0.22);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(243, 252, 252, 0.96));
+  box-shadow: 0 18px 42px rgba(15, 47, 87, 0.08);
+}
+
 ::selection {
   background: rgba(0, 103, 197, 0.2);
   color: #082040;

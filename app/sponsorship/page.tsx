@@ -38,7 +38,7 @@ export default function Sponsorship() {
     <main className="min-h-screen bg-white text-slate-900">
       <SiteNav />
 
-      <section className="relative flex min-h-[360px] items-center justify-center overflow-hidden px-6 py-20 text-center text-white md:min-h-[420px]">
+      <section className="page-reveal relative flex min-h-[360px] items-center justify-center overflow-hidden px-6 py-20 text-center text-white md:min-h-[420px]">
         <div className="absolute inset-0 flex justify-center overflow-hidden">
           <div className="h-full w-[28vw] max-w-[480px] overflow-hidden">
             <img
@@ -68,8 +68,8 @@ export default function Sponsorship() {
         </div>
       </section>
 
-      <section className="px-6 py-16 md:px-10">
-        <div className="mx-auto max-w-5xl text-center">
+      <section className="page-reveal-delay-1 px-6 py-16 md:px-10">
+        <div className="page-shell mx-auto max-w-5xl rounded-[30px] p-6 text-center md:p-8">
           <h2 className="mx-auto max-w-3xl text-2xl font-extrabold text-[#0f2f57] md:text-3xl">
             Become a Sponsor for SHPE TAMU-CC
           </h2>
@@ -85,8 +85,8 @@ export default function Sponsorship() {
         </div>
       </section>
 
-      <section className="bg-[#e7f2fc] px-6 py-16 md:px-10">
-        <div className="mx-auto max-w-6xl">
+      <section className="page-reveal-delay-2 bg-[#e7f2fc] px-6 py-16 md:px-10">
+        <div className="page-shell mx-auto max-w-6xl rounded-[30px] p-6 md:p-8">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold text-[#0f2f57] md:text-4xl">
               Sponsorship Benefits
@@ -116,8 +116,8 @@ export default function Sponsorship() {
         </div>
       </section>
 
-      <section className="px-6 py-12 md:px-10">
-        <div className="mx-auto max-w-4xl rounded-2xl border border-slate-100 bg-white p-6 text-center shadow-xl md:p-8">
+      <section className="page-reveal-delay-1 px-6 py-12 md:px-10">
+        <div className="page-shell mx-auto max-w-4xl rounded-[28px] p-6 text-center md:p-8">
           <h2 className="text-2xl font-extrabold text-[#0f2f57] md:text-3xl">
             Ready to Partner with SHPE TAMU-CC?
           </h2>

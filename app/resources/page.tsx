@@ -93,7 +93,7 @@ export default function Resources() {
     <main className="min-h-screen bg-[#f5fbff] text-slate-900">
       <SiteNav />
 
-      <section className="overflow-hidden bg-[linear-gradient(135deg,#0b6db4_0%,#1d7fd0_56%,#001f5b_100%)] px-6 py-10 md:px-10">
+      <section className="page-reveal overflow-hidden bg-[linear-gradient(135deg,#0b6db4_0%,#1d7fd0_56%,#001f5b_100%)] px-6 py-10 md:px-10">
         <div className="page-reveal mx-auto max-w-6xl">
           <p className="mb-4 text-lg font-semibold uppercase tracking-[0.45em] text-white">
             Resources
@@ -107,8 +107,8 @@ export default function Resources() {
         </div>
       </section>
 
-      <section className="px-6 py-10 md:px-10">
-        <div className="mx-auto flex max-w-6xl flex-wrap justify-center gap-5">
+      <section className="page-reveal-delay-1 px-6 py-10 md:px-10">
+        <div className="page-shell mx-auto flex max-w-6xl flex-wrap justify-center gap-5 rounded-[30px] p-4 md:p-5">
           {resources.map((resource, index) => (
             <article
               key={resource.title}
