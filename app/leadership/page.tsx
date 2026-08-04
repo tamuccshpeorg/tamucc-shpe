@@ -3,7 +3,7 @@ import SiteNav from "../components/SiteNav";
 const officers = [
   {
     name: "Lucero Robles Aguirre",
-    position: "President",
+    position: "Co-President",
     pronouns: "She/Her",
     major: "Mechanical Engineering",
     classification: "Senior",
@@ -12,9 +12,19 @@ const officers = [
     image: "/Pictures/Leadership/lucero-robles-aguirre.jpeg",
   },
   {
+    name: "Joshua Gonzalez",
+    position: "Co-President",
+    pronouns: "He/Him",
+    major: "Mechanical Engineering",
+    classification: "Senior",
+    email: "jgonzalez212@islander.tamucc.edu",
+    linkedin: "https://www.linkedin.com/in/joshua-gonzalez-2a3302383/",
+    image: "/Pictures/logos/shpe_logo.png",
+  },
+  {
     name: "Samuel Allen Mack",
     position: "Vice President",
-    pronouns: "he/him/his",
+    pronouns: "He/Him/His",
     major: "Mechanical Engineering",
     classification: "Senior",
     email: "smack2@islander.tamucc.edu",
@@ -24,7 +34,7 @@ const officers = [
   {
     name: "Andres Dwindt",
     position: "Treasurer",
-    pronouns: "he/him",
+    pronouns: "He/Him",
     major: "Mechanical Engineering",
     classification: "Senior",
     email: "adwindt@islander.tamucc.edu",
@@ -42,19 +52,9 @@ const officers = [
     image: "/Pictures/logos/shpe_logo.png",
   },
   {
-    name: "Joshua Gonzalez",
-    position: "Director of Outreach",
-    pronouns: "he/him",
-    major: "Mechanical Engineering",
-    classification: "Senior",
-    email: "jgonzalez212@islander.tamucc.edu",
-    linkedin: "https://www.linkedin.com/in/joshua-gonzalez-2a3302383/",
-    image: "/Pictures/logos/shpe_logo.png",
-  },
-  {
     name: "Michael Mario Mendez",
     position: "Director of Marketing",
-    pronouns: "he/him",
+    pronouns: "He/Him",
     major: "Computer Science",
     classification: "",
     email: "mmendez30@islander.tamucc.edu",
@@ -64,7 +64,7 @@ const officers = [
   {
     name: "Jose Baquero",
     position: "Engineering Student Advisor",
-    pronouns: "he/him/his",
+    pronouns: "He/Him/His",
     major: "Mechanical Engineering",
     classification: "Senior",
     email: "jbaqueroovalle@islander.tamucc.edu",
@@ -93,13 +93,13 @@ export default function Leadership() {
             </p>
 
             <h1 className="font-serif text-3xl font-bold uppercase leading-[1.05] text-white md:text-4xl lg:text-[2.65rem]">
-              SHPE TAMUCC Officers
+              SHPE TAMU-CC Officers
             </h1>
 
-            <div className="mt-4 h-0.5 w-16 bg-white" />
+            <div className="mt-4 h-0.5 w-16 bg-[#76e3d0]" />
 
             <p className="mt-4 max-w-5xl text-sm font-semibold leading-6 text-white md:text-base">
-              At TAMUCC, the SHPE Executive Board bridges academic excellence
+              At TAMU-CC, the SHPE Executive Board bridges academic excellence
               with lifelong professional opportunity. Grounded in our core
               values of Familia, Service, Education, and Resilience, our
               leadership team is dedicated to cultivating an environment where
@@ -113,7 +113,7 @@ export default function Leadership() {
             {officers.map((officer) => (
               <article
                 key={`${officer.name}-${officer.position}`}
-                className="officer-card w-full rounded-[22px] border border-white/80 bg-[#f5fbff] p-3 text-blue-950 shadow-xl shadow-blue-950/18 transition duration-300 ease-out hover:-translate-y-1 hover:border-[#f26b2c]/80 hover:shadow-2xl hover:shadow-blue-950/25 sm:w-[calc((100%-1.25rem)/2)] lg:w-[calc((100%-3.75rem)/4)]"
+                className="officer-card w-full rounded-[22px] border border-white/80 bg-[#f5fbff] p-3 text-[#0f2f57] shadow-[0_18px_40px_rgba(0,103,197,0.08)] transition duration-300 ease-out hover:-translate-y-1 hover:border-[#f26b2c]/80 hover:shadow-2xl hover:shadow-blue-950/12 sm:w-[calc((100%-1.25rem)/2)] lg:w-[calc((100%-3.75rem)/4)]"
               >
                 <div className="flex min-h-[355px] flex-col items-center rounded-[18px] border-[3px] border-[#0067c5] bg-white p-4 text-center">
                   <div className="headshot-frame mb-4 flex h-28 w-28 items-center justify-center rounded-full border-[3px] border-[#f26b2c]/30 bg-white shadow-[0_14px_28px_rgba(0,31,91,0.16)] transition duration-300 ease-out">
@@ -122,7 +122,7 @@ export default function Leadership() {
                     </span>
                   </div>
 
-                  <h2 className="text-xl font-extrabold leading-tight text-blue-950 xl:text-[1.35rem]">
+                  <h2 className="text-xl font-extrabold leading-tight text-[#0f2f57] xl:text-[1.35rem]">
                     {officer.name}
                   </h2>
 
@@ -159,19 +159,19 @@ export default function Leadership() {
                   <div className="mt-4 w-full space-y-1 border-t border-[#d7eefb] pt-4 text-left text-sm leading-5 text-slate-800">
                     {officer.pronouns ? (
                       <p>
-                        <span className="font-bold text-blue-950">
+                        <span className="font-bold text-[#0f2f57]">
                           Pronouns:
                         </span>{" "}
                         {officer.pronouns}
                       </p>
                     ) : null}
                     <p>
-                      <span className="font-bold text-blue-950">Major:</span>{" "}
+                      <span className="font-bold text-[#0f2f57]">Major:</span>{" "}
                       {officer.major}
                     </p>
                     {officer.classification ? (
                       <p>
-                        <span className="font-bold text-blue-950">
+                        <span className="font-bold text-[#0f2f57]">
                           Classification:
                         </span>{" "}
                         {officer.classification}

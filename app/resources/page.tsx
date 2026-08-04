@@ -30,7 +30,7 @@ const resources = [
         href: "https://tamucc.joinhandshake.com/",
       },
       {
-        text: "TAMUCC Career Center",
+        text: "TAMU-CC Career Center",
         href: "https://www.tamucc.edu/institutional-advancement/career-center/index.php",
       },
     ],
@@ -93,7 +93,7 @@ export default function Resources() {
     <main className="min-h-screen bg-[#f5fbff] text-slate-900">
       <SiteNav />
 
-      <section className="overflow-hidden bg-gradient-to-br from-[#0067c5] via-[#1d7fd0] to-[#001f5b] px-6 py-10 md:px-10">
+      <section className="overflow-hidden bg-[linear-gradient(135deg,#0b6db4_0%,#1d7fd0_56%,#001f5b_100%)] px-6 py-10 md:px-10">
         <div className="page-reveal mx-auto max-w-6xl">
           <p className="mb-4 text-lg font-semibold uppercase tracking-[0.45em] text-white">
             Resources
@@ -112,7 +112,7 @@ export default function Resources() {
           {resources.map((resource, index) => (
             <article
               key={resource.title}
-              className={`w-full rounded-[22px] border border-white/80 bg-white p-3 text-blue-950 shadow-xl shadow-blue-950/10 transition duration-300 ease-out hover:-translate-y-1.5 hover:border-[#f26b2c]/80 hover:shadow-2xl hover:shadow-blue-950/20 md:w-[calc((100%-1.25rem)/2)] lg:w-[calc((100%-2.5rem)/3)] ${
+              className={`w-full rounded-[22px] border border-white/80 bg-white p-3 text-[#0f2f57] shadow-[0_18px_40px_rgba(0,103,197,0.08)] transition duration-300 ease-out hover:-translate-y-1.5 hover:border-[#f26b2c]/80 hover:shadow-2xl hover:shadow-blue-950/12 md:w-[calc((100%-1.25rem)/2)] lg:w-[calc((100%-2.5rem)/3)] ${
                 index % 2 === 0 ? "page-reveal-delay-1" : "page-reveal-delay-2"
               }`}
             >
@@ -141,7 +141,7 @@ export default function Resources() {
                         href={link.href}
                         target="_blank"
                         rel="noreferrer"
-                        className="flex min-h-10 items-center justify-center rounded-xl bg-blue-950 px-3 py-2 text-center text-xs font-bold text-white shadow-md shadow-blue-950/20 transition duration-300 hover:-translate-y-1 hover:bg-[#f26b2c] hover:shadow-lg hover:shadow-orange-500/20"
+                        className="flex min-h-10 items-center justify-center rounded-xl bg-[#0067C5] px-3 py-2 text-center text-xs font-bold text-white shadow-md shadow-[#0067C5]/20 transition duration-300 hover:-translate-y-1 hover:bg-[#f26b2c] hover:shadow-lg hover:shadow-orange-500/20"
                       >
                         {link.text}
                       </a>

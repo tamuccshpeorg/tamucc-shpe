@@ -53,7 +53,7 @@ const pillars = [
 
 export default function Home() {
   const sponsorText =
-    "We are currently seeking sponsors to support professional development, conference travel, workshops, and outreach events for Hispanic STEM students at TAMU-CC.";
+    "We are currently seeking sponsors to support professional development, conference travel, workshops, and outreach events for Hispanic STEM students at Texas A&M University-Corpus Christi.";
 
   const [currentImage, setCurrentImage] = useState(0);
   const [currentFlyer, setCurrentFlyer] = useState(0);
@@ -78,10 +78,10 @@ export default function Home() {
     <main className="min-h-screen bg-white text-slate-900">
       <SiteNav />
 
-      <section className="min-h-[calc(100vh-113px)] bg-[#E07523] px-12 py-10">
+      <section className="min-h-[calc(100vh-113px)] bg-[linear-gradient(135deg,#0b4f7b_0%,#0d73a8_48%,#17a7ab_100%)] px-12 py-10">
         <div className="mx-auto grid h-full max-w-6xl items-center gap-6 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="flex flex-col items-center text-center">
-            <p className="mb-4 text-lg font-semibold uppercase tracking-[0.45em] text-white">
+            <p className="mb-4 text-lg font-semibold uppercase tracking-[0.45em] text-white/95">
               SHPE TAMU-CC
             </p>
 
@@ -91,21 +91,21 @@ export default function Home() {
               Professional Engineers
             </h1>
 
-            <p className="mt-6 text-lg font-semibold uppercase tracking-[0.28em] text-white">
+            <p className="mt-6 text-lg font-semibold uppercase tracking-[0.28em] text-white/95">
               Texas A&M University-Corpus Christi
             </p>
 
-            <div className="mt-8 flex justify-center">
+            <div className="mt-8 flex justify-center rounded-[30px] border border-[#8ae2cf]/70 bg-white/20 p-2 shadow-[0_25px_60px_rgba(8,32,64,0.28)]">
               <img
                 src={horizontalImages[currentImage]}
                 alt="SHPE horizontal photo"
-                className="max-h-[400px] max-w-full rounded-3xl object-contain"
+                className="max-h-[400px] max-w-full rounded-[24px] object-contain"
               />
             </div>
           </div>
 
           <div className="flex flex-col items-center">
-            <div className="overflow-hidden rounded-3xl shadow-2xl">
+            <div className="overflow-hidden rounded-[28px] shadow-[0_26px_70px_rgba(7,26,68,0.28)]">
               <img
                 src={verticalImages[currentImage]}
                 alt="SHPE vertical photo"
@@ -122,7 +122,7 @@ export default function Home() {
 
       <section className="px-10 py-12">
         <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-2 lg:gap-14">
-          <div className="flex flex-col rounded-3xl bg-blue-950 p-6 text-white shadow-xl">
+          <div className="flex flex-col rounded-[28px] bg-[linear-gradient(180deg,#ffffff_0%,#eff9fd_100%)] p-6 text-[#0f2f57] shadow-[0_20px_50px_rgba(15,47,87,0.12)]">
             <h2 className="mb-5 text-center text-3xl font-bold">
               Upcoming Events
             </h2>
@@ -154,8 +154,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex h-full flex-col rounded-3xl bg-blue-950 p-5 shadow-xl">
-            <h2 className="mb-4 text-center text-3xl font-bold text-white">
+          <div className="flex h-full flex-col rounded-[28px] bg-[linear-gradient(180deg,#ffffff_0%,#eff9fd_100%)] p-5 shadow-[0_20px_50px_rgba(15,47,87,0.12)]">
+            <h2 className="mb-4 text-center text-3xl font-bold text-[#0f2f57]">
               Our Pillars
             </h2>
 
@@ -163,9 +163,9 @@ export default function Home() {
               {pillars.map((pillar) => (
                 <div
                   key={pillar.title}
-                  className="flex flex-1 items-center gap-3 rounded-2xl bg-blue-400/90 p-4 text-white shadow-md"
+                  className="flex flex-1 items-center gap-3 rounded-2xl bg-[linear-gradient(135deg,#e5f8f6_0%,#f1faff_100%)] p-4 text-[#0f2f57] shadow-md"
                 >
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/90 p-2">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white p-2">
                     <img
                       src={pillar.icon}
                       alt={pillar.title}
@@ -175,7 +175,7 @@ export default function Home() {
 
                   <div>
                     <h3 className="text-xl font-bold">{pillar.title}</h3>
-                    <p className="mt-1 text-sm leading-6 text-white/95">
+                    <p className="mt-1 text-sm leading-6 text-slate-700">
                       {pillar.text}
                     </p>
                   </div>
@@ -187,7 +187,7 @@ export default function Home() {
       </section>
 
       <section className="px-10 py-24">
-        <h2 className="mb-8 text-4xl font-bold text-blue-950">
+        <h2 className="mb-8 text-4xl font-bold text-[#0f2f57]">
           Our Google Calendar
         </h2>
 
@@ -203,20 +203,20 @@ export default function Home() {
             href="https://calendar.google.com/calendar/u/1?cid=dGFtdWNjLnNocGUub3JnQGdtYWlsLmNvbQ"
             target="_blank"
             rel="noreferrer"
-            className="rounded-full bg-blue-950 px-7 py-3 text-base font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-blue-900 hover:shadow-xl"
+            className="rounded-full bg-[#0067C5] px-7 py-3 text-base font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-[#1489d5] hover:shadow-xl"
           >
             Add to Google Calendar
           </a>
         </div>
       </section>
 
-      <section className="border-y bg-white py-12">
-        <h2 className="mb-8 text-center text-5xl font-extrabold text-blue-950">
+      <section className="border-y border-[#c1e7f2] bg-[linear-gradient(180deg,#f8fdff_0%,#edf8fc_100%)] py-12">
+        <h2 className="mb-8 text-center text-5xl font-extrabold text-[#0f2f57]">
           Sponsors
         </h2>
 
         <div className="overflow-hidden whitespace-nowrap">
-          <div className="animate-marquee flex w-max gap-10 text-3xl font-bold text-blue-950">
+          <div className="animate-marquee flex w-max gap-10 text-3xl font-bold text-[#0f2f57]">
             {[...Array(6)].map((_, index) => (
               <span key={index}>
                 {sponsorText} <span className="mx-6 text-orange-500">*</span>

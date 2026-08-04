@@ -63,14 +63,14 @@ export default function Sponsorship() {
         <div className="absolute inset-0 bg-blue-950/75" />
         <div className="relative z-10 mx-auto max-w-4xl">
           <h1 className="text-4xl font-extrabold md:text-5xl">
-            Become A Sponsor!
+            Become a Sponsor!
           </h1>
         </div>
       </section>
 
       <section className="px-6 py-16 md:px-10">
         <div className="mx-auto max-w-5xl text-center">
-          <h2 className="mx-auto max-w-3xl text-2xl font-extrabold text-blue-950 md:text-3xl">
+          <h2 className="mx-auto max-w-3xl text-2xl font-extrabold text-[#0f2f57] md:text-3xl">
             Become a Sponsor for SHPE TAMU-CC
           </h2>
           <div className="mx-auto mt-5 h-1 w-20 rounded-full bg-[#E07523]" />
@@ -88,7 +88,7 @@ export default function Sponsorship() {
       <section className="bg-[#e7f2fc] px-6 py-16 md:px-10">
         <div className="mx-auto max-w-6xl">
           <div className="text-center">
-            <h2 className="text-3xl font-extrabold text-blue-950 md:text-4xl">
+            <h2 className="text-3xl font-extrabold text-[#0f2f57] md:text-4xl">
               Sponsorship Benefits
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-700">
@@ -104,7 +104,7 @@ export default function Sponsorship() {
                 key={benefit.title}
                 className="rounded-lg border border-[#0067C5]/15 bg-white p-6 shadow-md transition hover:-translate-y-1 hover:shadow-xl"
               >
-                <h3 className="text-xl font-bold text-blue-950">
+                <h3 className="text-xl font-bold text-[#0f2f57]">
                   {benefit.title}
                 </h3>
                 <p className="mt-3 leading-7 text-slate-600">
@@ -118,8 +118,8 @@ export default function Sponsorship() {
 
       <section className="px-6 py-12 md:px-10">
         <div className="mx-auto max-w-4xl rounded-2xl border border-slate-100 bg-white p-6 text-center shadow-xl md:p-8">
-          <h2 className="text-2xl font-extrabold text-[#a55a2c] md:text-3xl">
-            Ready to Partner With SHPE TAMU-CC?
+          <h2 className="text-2xl font-extrabold text-[#0f2f57] md:text-3xl">
+            Ready to Partner with SHPE TAMU-CC?
           </h2>
           <div className="mx-auto mt-4 h-px max-w-2xl bg-slate-300" />
           <p className="mx-auto mt-5 max-w-3xl text-sm leading-7 text-slate-800 md:text-base">

@@ -32,7 +32,7 @@ export default function Membership() {
     <main className="min-h-screen bg-[#fbf5ec] text-slate-900">
       <SiteNav />
 
-      <section className="relative flex min-h-[calc(100vh-105px)] items-center overflow-hidden bg-[#eef9fc] px-6 py-16 md:px-10 lg:py-20">
+      <section className="relative flex min-h-[calc(100vh-105px)] items-center overflow-hidden bg-[linear-gradient(180deg,#f4fbff_0%,#edf8fc_100%)] px-6 py-16 md:px-10 lg:py-20">
         <div className="pointer-events-none absolute left-10 top-12 h-28 w-28 rounded-full border border-[#b9e6f1]" />
         <div className="pointer-events-none absolute bottom-10 right-12 grid grid-cols-4 gap-3 opacity-35">
           {[...Array(16)].map((_, index) => (
@@ -56,7 +56,7 @@ export default function Membership() {
               academically, professionally, and socially. Whether you are
               Hispanic, an engineer, or simply interested in STEM, you are
               welcome to join and take advantage of opportunities at both the
-              local and national level.
+              local and national levels.
             </p>
             <div className="mt-10 border-l-4 border-[#0067C5] pl-5">
               <p className="font-serif text-xl italic leading-8 text-[#071a44] md:text-2xl">
@@ -79,7 +79,7 @@ export default function Membership() {
       <section id="join-committee" className="bg-white px-6 py-16 md:px-10">
         <div className="mx-auto max-w-6xl">
           <div className="text-center">
-            <h2 className="text-3xl font-extrabold text-blue-950 md:text-4xl">
+            <h2 className="text-3xl font-extrabold text-[#0f2f57] md:text-4xl">
               Join a Committee
             </h2>
             <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-slate-700">
@@ -92,7 +92,7 @@ export default function Membership() {
             {committeeCards.map((committee) => (
               <article
                 key={committee.title}
-                className="overflow-hidden rounded-2xl bg-[#fbf5ec] shadow-xl"
+                className="overflow-hidden rounded-[22px] bg-[#fbf5ec] shadow-[0_18px_36px_rgba(15,47,87,0.08)]"
               >
                 <img
                   src={committee.image}
@@ -100,7 +100,7 @@ export default function Membership() {
                   className="h-72 w-full object-cover"
                 />
                 <div className="p-7">
-                  <h3 className="text-2xl font-extrabold text-blue-950">
+                  <h3 className="text-2xl font-extrabold text-[#0f2f57]">
                     {committee.title}
                   </h3>
                   <p className="mt-4 leading-7 text-slate-700">
@@ -127,7 +127,7 @@ export default function Membership() {
       <section className="flex min-h-[calc(100vh-90px)] items-center bg-white px-6 py-10 md:px-10">
         <div className="mx-auto grid w-full max-w-7xl gap-10 border border-slate-100 bg-white p-8 shadow-[0_22px_70px_rgba(15,23,42,0.08)] lg:grid-cols-[0.9fr_1.1fr] lg:p-12">
           <article className="flex flex-col justify-center">
-            <h2 className="font-serif text-5xl font-black leading-none text-blue-950 md:text-6xl">
+            <h2 className="font-serif text-5xl font-black leading-none text-[#0f2f57] md:text-6xl">
               The Point System
             </h2>
             <div className="mt-5 flex items-center gap-3">
@@ -135,8 +135,8 @@ export default function Membership() {
               <span className="h-px flex-1 bg-slate-200" />
             </div>
 
-            <h3 className="mt-9 text-2xl font-black text-blue-950">
-              Ways to earn points
+            <h3 className="mt-9 text-2xl font-black text-[#0f2f57]">
+              Ways to Earn Points
             </h3>
             <div className="mt-5">
               {allPointWays.map(([points, activity]) => (
@@ -144,7 +144,7 @@ export default function Membership() {
                   key={activity}
                   className="grid grid-cols-[105px_1fr] items-center border-b border-slate-200 py-3 last:border-b-0"
                 >
-                  <span className="text-xl font-black text-blue-950">
+                  <span className="text-xl font-black text-[#0f2f57]">
                     +{points}
                   </span>
                   <p className="text-base leading-6 text-slate-700 md:text-lg">
@@ -194,7 +194,7 @@ export default function Membership() {
             className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="relative flex min-h-[760px] items-center px-6 py-10 md:px-16">
-            <article className="max-w-3xl rounded-[28px] bg-white/90 p-8 text-blue-950 shadow-2xl md:p-12">
+            <article className="max-w-3xl rounded-[28px] bg-white/90 p-8 text-[#0f2f57] shadow-2xl md:p-12">
               <h2 className="font-serif text-5xl font-extrabold leading-tight md:text-6xl">
                 National Membership
               </h2>
@@ -226,7 +226,7 @@ export default function Membership() {
                 href={nationalMembershipUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-10 inline-flex rounded bg-blue-950 px-12 py-4 text-lg font-bold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-[#15346e]"
+                className="mt-10 inline-flex rounded bg-[#0067C5] px-12 py-4 text-lg font-bold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-[#1489d5]"
               >
                 National MemberSHPE
               </a>
