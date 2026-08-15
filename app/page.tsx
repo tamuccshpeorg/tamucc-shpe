@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import SiteNav from "./components/SiteNav";
+import { calendarFeedUrl, calendarEvents, getOutlookCalendarUrl } from "./lib/calendar-data";
 
 const horizontalImages = [
   "/Pictures/Everything/convention group pciture.jpeg",
@@ -244,41 +245,91 @@ export default function Home() {
             </div>
 
             <a
-              href="https://calendar.google.com/calendar/u/1?cid=dGFtdWNjLnNocGUub3JnQGdtYWlsLmNvbQ"
+              href={calendarFeedUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-[#0067C5] px-7 py-3 text-base font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-[#1489d5] hover:shadow-xl"
+              className="inline-flex items-center justify-center rounded-full bg-[#0b8b70] px-7 py-3 text-base font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-[#0a7560] hover:shadow-xl"
             >
-              Add to Google Calendar
+              Subscribe to SHPE Calendar
             </a>
           </div>
 
           <div className="page-shell overflow-hidden rounded-[30px] p-4 md:p-6">
+            <p className="mb-5 text-sm leading-6 text-slate-700">
+              Subscribe to the SHPE TAMU-CC calendar to automatically receive new events and updates in your Outlook calendar.
+            </p>
             <div className="grid gap-4">
-              {fall2026Events.map((event) => (
-                <article
-                  key={`${event.date}-${event.time}-${event.title}`}
-                  className="flex flex-col gap-3 rounded-[22px] border border-[#a8e5d8] bg-[linear-gradient(135deg,#f7fffd_0%,#f2fbff_100%)] p-5 shadow-[0_16px_30px_rgba(15,47,87,0.06)] md:flex-row md:items-center md:justify-between"
-                >
-                  <div className="flex min-w-[190px] flex-col">
-                    <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#0b8b70]">
-                      {event.date}
-                    </p>
-                    <p className="mt-2 text-lg font-semibold text-[#0f2f57]">
-                      {event.time}
-                    </p>
-                  </div>
+              {calendarEvents.map((event) => {
+                const eventDateTime = new Date(event.start);
+                const endDateTime = new Date(event.end);
+                const startLabel = eventDateTime.toLocaleString("en-US", {
+                  month: "long",
+                  day: "numeric",
+                  year: "numeric",
+                  hour: "numeric",
+                  minute: "2-digit",
+                  timeZone: "America/Chicago",
+                });
+                const endLabel = endDateTime.toLocaleString("en-US", {
+                  month: "long",
+                  day: "numeric",
+                  year: "numeric",
+                  hour: "numeric",
+                  minute: "2-digit",
+                  timeZone: "America/Chicago",
+                });
 
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-[#0f2f57]">
-                      {event.title}
-                    </h3>
-                    <p className="mt-2 text-base leading-7 text-slate-700">
-                      {event.detail}
-                    </p>
-                  </div>
-                </article>
-              ))}
+                return (
+                  <article
+                    key={event.id}
+                    className="flex flex-col gap-4 rounded-[22px] border border-[#a8e5d8] bg-[linear-gradient(135deg,#f7fffd_0%,#f2fbff_100%)] p-5 shadow-[0_16px_30px_rgba(15,47,87,0.06)] md:flex-row md:items-center md:justify-between"
+                  >
+                    <div className="flex min-w-[200px] flex-col">
+                      <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#0b8b70]">
+                        {eventDateTime.toLocaleDateString("en-US", {
+                          month: "long",
+                          day: "numeric",
+                          year: "numeric",
+                          timeZone: "America/Chicago",
+                        })}
+                      </p>
+                      <p className="mt-2 text-lg font-semibold text-[#0f2f57]">
+                        {eventDateTime.toLocaleTimeString("en-US", {
+                          hour: "numeric",
+                          minute: "2-digit",
+                          timeZone: "America/Chicago",
+                        })}
+                        {" – "}
+                        {endDateTime.toLocaleTimeString("en-US", {
+                          hour: "numeric",
+                          minute: "2-digit",
+                          timeZone: "America/Chicago",
+                        })}
+                      </p>
+                    </div>
+
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-[#0f2f57]">
+                        {event.title}
+                      </h3>
+                      <p className="mt-2 text-base leading-7 text-slate-700">
+                        {event.description}
+                      </p>
+                    </div>
+
+                    <div className="flex shrink-0">
+                      <a
+                        href={getOutlookCalendarUrl(event)}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center justify-center rounded-full bg-[#0067C5] px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-[#1489d5] hover:shadow-xl"
+                      >
+                        Add to Outlook Calendar
+                      </a>
+                    </div>
+                  </article>
+                );
+              })}
             </div>
           </div>
         </div>
