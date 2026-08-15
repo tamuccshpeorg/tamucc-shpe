@@ -73,7 +73,9 @@ export const calendarEvents: CalendarEvent[] = [
   },
 ];
 
-export const calendarFeedUrl = "/api/calendar";
+export const calendarFeedUrl = "https://www.tamuccshpe.org/api/calendar";
+
+export const outlookSubscribeUrl = `https://outlook.office.com/calendar/0/addfromweb?url=${encodeURIComponent(calendarFeedUrl)}`;
 
 export function getOutlookCalendarUrl(event: CalendarEvent) {
   const start = new Date(event.start);

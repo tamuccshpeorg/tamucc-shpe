@@ -54,7 +54,7 @@ export async function GET() {
   return new NextResponse(lines.join("\r\n"), {
     headers: {
       "Content-Type": "text/calendar; charset=utf-8",
-      "Content-Disposition": 'attachment; filename="shpe-tamucc-calendar.ics"',
+      "Content-Disposition": 'inline; filename="shpe-tamucc-calendar.ics"',
       "Cache-Control": "no-cache, no-store, must-revalidate",
       "Pragma": "no-cache",
       "Expires": "0",

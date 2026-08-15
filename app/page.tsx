@@ -2,7 +2,12 @@
 
 import { useEffect, useState } from "react";
 import SiteNav from "./components/SiteNav";
-import { calendarFeedUrl, calendarEvents, getOutlookCalendarUrl } from "./lib/calendar-data";
+import {
+  calendarEvents,
+  calendarFeedUrl,
+  getOutlookCalendarUrl,
+  outlookSubscribeUrl,
+} from "./lib/calendar-data";
 
 const horizontalImages = [
   "/Pictures/Everything/convention group pciture.jpeg",
@@ -103,6 +108,8 @@ export default function Home() {
 
   const [currentImage, setCurrentImage] = useState(0);
   const [currentFlyer, setCurrentFlyer] = useState(0);
+  const [calendarCopied, setCalendarCopied] = useState(false);
+  const [showOutlookHelp, setShowOutlookHelp] = useState(false);
 
   const showPreviousFlyer = () => {
     setCurrentFlyer((prev) => (prev === 0 ? flyerImages.length - 1 : prev - 1));
@@ -110,6 +117,16 @@ export default function Home() {
 
   const showNextFlyer = () => {
     setCurrentFlyer((prev) => (prev + 1) % flyerImages.length);
+  };
+
+  const copyCalendarSubscriptionLink = async () => {
+    try {
+      await navigator.clipboard.writeText(calendarFeedUrl);
+      setCalendarCopied(true);
+      window.setTimeout(() => setCalendarCopied(false), 2000);
+    } catch {
+      setCalendarCopied(false);
+    }
   };
 
   useEffect(() => {
@@ -243,21 +260,54 @@ export default function Home() {
                 SHPE TAMU-CC Calendar
               </h2>
             </div>
-
-            <a
-              href={calendarFeedUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-[#0b8b70] px-7 py-3 text-base font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-[#0a7560] hover:shadow-xl"
-            >
-              Subscribe to SHPE Calendar
-            </a>
           </div>
 
           <div className="page-shell overflow-hidden rounded-[30px] p-4 md:p-6">
-            <p className="mb-5 text-sm leading-6 text-slate-700">
-              Subscribe to the SHPE TAMU-CC calendar to automatically receive new events and updates in your Outlook calendar.
+            <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <a
+                href={outlookSubscribeUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center rounded-full bg-[#0b8b70] px-7 py-3 text-base font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-[#0a7560] hover:shadow-xl"
+              >
+                Subscribe to SHPE Calendar
+              </a>
+
+              <button
+                type="button"
+                onClick={copyCalendarSubscriptionLink}
+                className="inline-flex items-center justify-center rounded-full border border-[#8ae2cf] bg-white px-7 py-3 text-base font-semibold text-[#0f2f57] shadow-md transition hover:-translate-y-0.5 hover:border-[#0b8b70] hover:text-[#0b8b70]"
+              >
+                {calendarCopied ? "Link Copied" : "Copy Subscription Link"}
+              </button>
+            </div>
+
+            <p className="mb-3 text-sm leading-6 text-slate-700">
+              Subscribe to automatically receive new SHPE events and updates.
             </p>
+
+            <button
+              type="button"
+              onClick={() => setShowOutlookHelp((prev) => !prev)}
+              className="inline-flex w-fit items-center text-sm font-semibold text-[#0b8b70] underline decoration-[#8ae2cf] underline-offset-4 transition hover:text-[#0a7560]"
+            >
+              How to add this to Outlook
+            </button>
+
+            {showOutlookHelp && (
+              <div className="mt-3 rounded-2xl border border-[#a8e5d8] bg-[#f4fffd] p-4 text-sm leading-6 text-slate-700">
+                <ol className="list-decimal space-y-2 pl-5">
+                  <li>Click “Copy Subscription Link.”</li>
+                  <li>Open Outlook Calendar.</li>
+                  <li>Choose “Add” or “Subscribe” to an Internet Calendar.</li>
+                  <li>Paste the SHPE calendar subscription link.</li>
+                  <li>Subscribe to keep future SHPE updates synced automatically.</li>
+                </ol>
+                <p className="mt-3 text-xs text-slate-600">
+                  Choose a calendar subscription, not a one-time .ics import, if you want automatic future updates.
+                </p>
+              </div>
+            )}
             <div className="grid gap-4">
               {calendarEvents.map((event) => {
                 const eventDateTime = new Date(event.start);
