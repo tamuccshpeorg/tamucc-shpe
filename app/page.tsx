@@ -55,6 +55,51 @@ export default function Home() {
   const sponsorText =
     "We are currently seeking sponsors to support professional development, conference travel, workshops, and outreach events for Hispanic STEM students at Texas A&M University-Corpus Christi.";
 
+  const fall2026Events = [
+    {
+      date: "August 26, 2026",
+      time: "12:00 PM–1:00 PM",
+      title: "Engineering and Computer Science Student Societies Mixer",
+      detail: "A welcome mixer connecting SHPE members with peer student societies in engineering and computer science.",
+    },
+    {
+      date: "August 26, 2026",
+      time: "2:30 PM–4:30 PM",
+      title: "OECS New Student Mixer",
+      detail: "A networking and welcome event for new students to learn about campus opportunities and student organizations.",
+    },
+    {
+      date: "September 9, 2026",
+      time: "5:00 PM",
+      title: "First General Meeting",
+      detail: "Our first general meeting of the semester, featuring chapter updates, introductions, and upcoming opportunities.",
+    },
+    {
+      date: "September 17, 2026",
+      time: "5:00 PM",
+      title: "How to Prepare for the National Convention",
+      detail: "Collaboration with SWE to cover convention preparation, travel planning, networking strategies, and chapter expectations.",
+    },
+    {
+      date: "September 23, 2026",
+      time: "5:00 PM",
+      title: "Resume Review",
+      detail: "A resume-focused workshop in collaboration with engineering organizations to help members strengthen their applications.",
+    },
+    {
+      date: "October 1, 2026",
+      time: "5:00 PM",
+      title: "Career Fair Prep",
+      detail: "A collaboration with engineering organizations to prepare students for career fair success and employer outreach.",
+    },
+    {
+      date: "October 21, 2026",
+      time: "5:00 PM",
+      title: "SHPE Convention Prep",
+      detail: "A focused preparation session to help members get ready for the SHPE National Convention experience.",
+    },
+  ];
+
   const [currentImage, setCurrentImage] = useState(0);
   const [currentFlyer, setCurrentFlyer] = useState(0);
 
@@ -187,26 +232,55 @@ export default function Home() {
       </section>
 
       <section className="page-reveal-delay-2 px-10 py-24">
-        <h2 className="mb-8 text-4xl font-bold text-[#0f2f57]">
-          Our Google Calendar
-        </h2>
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-8 flex flex-col gap-4 text-center md:flex-row md:items-end md:justify-between md:text-left">
+            <div>
+              <p className="mb-2 text-sm font-semibold uppercase tracking-[0.35em] text-[#0b8b70]">
+                Fall 2026
+              </p>
+              <h2 className="text-4xl font-bold text-[#0f2f57]">
+                SHPE TAMU-CC Calendar
+              </h2>
+            </div>
 
-        <div className="overflow-hidden rounded-3xl border shadow-lg">
-          <iframe
-            src="https://calendar.google.com/calendar/embed?src=tamucc.shpe.org%40gmail.com&ctz=America%2FChicago"
-            className="h-[700px] w-full"
-          />
-        </div>
+            <a
+              href="https://calendar.google.com/calendar/u/1?cid=dGFtdWNjLnNocGUub3JnQGdtYWlsLmNvbQ"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center rounded-full bg-[#0067C5] px-7 py-3 text-base font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-[#1489d5] hover:shadow-xl"
+            >
+              Add to Google Calendar
+            </a>
+          </div>
 
-        <div className="mt-6 flex justify-center">
-          <a
-            href="https://calendar.google.com/calendar/u/1?cid=dGFtdWNjLnNocGUub3JnQGdtYWlsLmNvbQ"
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-full bg-[#0067C5] px-7 py-3 text-base font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-[#1489d5] hover:shadow-xl"
-          >
-            Add to Google Calendar
-          </a>
+          <div className="page-shell overflow-hidden rounded-[30px] p-4 md:p-6">
+            <div className="grid gap-4">
+              {fall2026Events.map((event) => (
+                <article
+                  key={`${event.date}-${event.time}-${event.title}`}
+                  className="flex flex-col gap-3 rounded-[22px] border border-[#a8e5d8] bg-[linear-gradient(135deg,#f7fffd_0%,#f2fbff_100%)] p-5 shadow-[0_16px_30px_rgba(15,47,87,0.06)] md:flex-row md:items-center md:justify-between"
+                >
+                  <div className="flex min-w-[190px] flex-col">
+                    <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#0b8b70]">
+                      {event.date}
+                    </p>
+                    <p className="mt-2 text-lg font-semibold text-[#0f2f57]">
+                      {event.time}
+                    </p>
+                  </div>
+
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-[#0f2f57]">
+                      {event.title}
+                    </h3>
+                    <p className="mt-2 text-base leading-7 text-slate-700">
+                      {event.detail}
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
