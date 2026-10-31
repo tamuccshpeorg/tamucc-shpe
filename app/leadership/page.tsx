@@ -112,7 +112,7 @@ const officers = [
     classification: "Sophomore",
     email: "adelagarza32@islander.tamucc.edu",
     linkedin: "https://www.linkedin.com/in/alessa-de-la-garza-30a2ba383",
-    image: "/images/alessa.jpeg",
+    image: "/images/Alessa.jpeg",
   },
   {
     name: "Ezekiel Russell",
