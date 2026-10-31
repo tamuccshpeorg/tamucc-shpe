@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import SiteNav from "../components/SiteNav";
 
 const officers = [
@@ -9,7 +12,7 @@ const officers = [
     classification: "Senior",
     email: "lroblesaguirre@islander.tamucc.edu",
     linkedin: "https://www.linkedin.com/in/lucerorobles/",
-    image: "/Pictures/Leadership/lucero-robles-aguirre.jpeg",
+    image: "/images/lucero.jpeg",
   },
   {
     name: "Joshua Gonzalez",
@@ -19,7 +22,7 @@ const officers = [
     classification: "Senior",
     email: "jgonzalez212@islander.tamucc.edu",
     linkedin: "https://www.linkedin.com/in/joshua-gonzalez-2a3302383/",
-    image: "/Pictures/logos/shpe_logo.png",
+    image: "/images/Josh.jpeg",
   },
   {
     name: "Samuel Allen Mack",
@@ -29,7 +32,7 @@ const officers = [
     classification: "Senior",
     email: "smack2@islander.tamucc.edu",
     linkedin: "https://www.linkedin.com/in/samuel-mack-80b38a40b/",
-    image: "/Pictures/logos/shpe_logo.png",
+    image: "/images/sam.jpeg",
   },
   {
     name: "Andres Dwindt",
@@ -49,7 +52,7 @@ const officers = [
     classification: "Junior",
     email: "klugardo@islander.tamucc.edu",
     linkedin: "https://www.linkedin.com/in/karinalugardo/",
-    image: "/Pictures/logos/shpe_logo.png",
+    image: "/images/katrina.jpeg",
   },
   {
     name: "Michael Mario Mendez",
@@ -62,13 +65,73 @@ const officers = [
     image: "/Pictures/logos/shpe_logo.png",
   },
   {
-    name: "Jose Baquero",
-    position: "Engineering Student Advisor",
+    name: "Boris Hernandez",
+    position: "",
     pronouns: "He/Him/His",
-    major: "Mechanical Engineering",
+    major: "Computer Science",
     classification: "Senior",
-    email: "jbaqueroovalle@islander.tamucc.edu",
-    linkedin: "https://www.linkedin.com/in/josedbaquero",
+    email: "",
+    linkedin: "",
+    image: "/Pictures/logos/shpe_logo.png",
+  },
+  {
+    name: "Emilio Cavazos",
+    position: "Secretary",
+    pronouns: "He/Him",
+    major: "Electrical Engineering",
+    classification: "Sophomore",
+    email: "ecavazos14@islander.tamucc.edu",
+    linkedin: "https://www.linkedin.com/in/emiliano-s-cavazos",
+    image: "/Pictures/logos/shpe_logo.png",
+  },
+  {
+    name: "Christian Tercero",
+    position: "Technology Director",
+    pronouns: "He/Him",
+    major: "Electrical Engineering",
+    classification: "Sophomore",
+    email: "ctercero@islander.tamucc.edu",
+    linkedin: "https://www.linkedin.com/in/christian-m-tercero",
+    image: "/images/chris.jpeg",
+  },
+  {
+    name: "Jacqueline Almendarez",
+    position: "",
+    pronouns: "She/Her",
+    major: "Mechanical Engineering, Mathematics",
+    classification: "Junior",
+    email: "jalmendarez2@islander.tamucc.edu",
+    linkedin: "https://www.linkedin.com/in/jac-alm",
+    image: "/Pictures/logos/shpe_logo.png",
+  },
+  {
+    name: "Alessa De La Garza",
+    position: "Outreach Coordinator",
+    pronouns: "She/Her",
+    major: "Mechanical Engineering",
+    classification: "Sophomore",
+    email: "adelagarza32@islander.tamucc.edu",
+    linkedin: "https://www.linkedin.com/in/alessa-de-la-garza-30a2ba383",
+    image: "/images/alessa.jpeg",
+  },
+  {
+    name: "Ezekiel Russell",
+    position: "Marketing Coordinator",
+    pronouns: "He/Him",
+    major: "Mechanical Engineering",
+    classification: "Sophomore",
+    email: "erussell3@islander.tamucc.edu",
+    linkedin: " https://www.linkedin.com/in/ezekiel-russell-354085447/",
+    image: "/Pictures/logos/shpe_logo.png",
+  },
+  {
+    name: "Brianna Stewart",
+    position: "",
+    pronouns: "She/Her",
+    major: "",
+    classification: "",
+    email: "",
+    linkedin: " ",
     image: "/Pictures/logos/shpe_logo.png",
   },
 ];
@@ -81,6 +144,18 @@ const getInitials = (name: string) =>
     .toUpperCase();
 
 export default function Leadership() {
+  const [flipped, setFlipped] = useState<string[]>(
+  officers
+    .filter((o) => o.image && !o.image.includes("shpe_logo"))
+    .map((o) => `${o.name}-${o.position}`),
+);
+
+  const toggleCard = (key: string) =>
+    setFlipped((current) =>
+      current.includes(key)
+        ? current.filter((k) => k !== key)
+        : [...current, key],
+    );
   return (
     <main className="min-h-screen bg-white text-slate-900">
       <SiteNav />
@@ -110,77 +185,136 @@ export default function Leadership() {
           </div>
 
           <div className="leadership-grid mt-7 flex flex-wrap justify-center gap-5">
-            {officers.map((officer) => (
-              <article
-                key={`${officer.name}-${officer.position}`}
-                className="officer-card w-full rounded-[22px] border border-white/80 bg-[#f5fbff] p-3 text-[#0f2f57] shadow-[0_18px_40px_rgba(0,103,197,0.08)] transition duration-300 ease-out hover:-translate-y-1 hover:border-[#f26b2c]/80 hover:shadow-2xl hover:shadow-blue-950/12 sm:w-[calc((100%-1.25rem)/2)] lg:w-[calc((100%-3.75rem)/4)]"
-              >
-                <div className="flex min-h-[355px] flex-col items-center rounded-[18px] border-[3px] border-[#0067c5] bg-white p-4 text-center">
-                  <div className="headshot-frame mb-4 flex h-28 w-28 items-center justify-center rounded-full border-[3px] border-[#f26b2c]/30 bg-white shadow-[0_14px_28px_rgba(0,31,91,0.16)] transition duration-300 ease-out">
-                    <span className="text-4xl font-black tracking-wide text-[#f26b2c]">
-                      {getInitials(officer.name)}
-                    </span>
+            {officers.map((officer) => {
+              const key = `${officer.name}-${officer.position}`;
+const imageSrc = officer.image || "/Pictures/logos/shpe_logo.png";
+const isLogo = imageSrc.includes("shpe_logo");
+const canFlip = !isLogo;
+const isFlipped = canFlip && flipped.includes(key);
+
+              return (
+                <article
+  key={key}
+  tabIndex={canFlip ? 0 : undefined}
+  onClick={(e) => {
+    if (!canFlip) return;
+    if ((e.target as HTMLElement).closest("a")) return;
+    toggleCard(key);
+  }}
+  onKeyDown={(e) => {
+    if (!canFlip) return;
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      toggleCard(key);
+    }
+  }}
+                  className={`officer-card w-full rounded-[22px] border border-white/80 bg-[#f5fbff] p-3 text-[#0f2f57] shadow-[0_18px_40px_rgba(0,103,197,0.08)] transition duration-300 ease-out hover:-translate-y-1 hover:border-[#f26b2c]/80 hover:shadow-2xl hover:shadow-blue-950/12 sm:w-[calc((100%-1.25rem)/2)] lg:w-[calc((100%-3.75rem)/4)] 
+                    ${isFlipped ? "flipped" : ""} ${canFlip ? "" : "no-flip"}`}
+                >
+                  <div className="flip-scene">
+                    <div className="flip-inner">
+                      {/* FRONT */}
+                      <div className="flex min-h-[355px] flex-col items-center rounded-[18px] border-[3px] border-[#0067c5] bg-white p-4 text-center">
+                        <div className="headshot-frame mb-4 flex h-28 w-28 items-center justify-center rounded-full border-[3px] border-[#f26b2c]/30 bg-white shadow-[0_14px_28px_rgba(0,31,91,0.16)] transition duration-300 ease-out">
+                          <span className="text-4xl font-black tracking-wide text-[#f26b2c]">
+                            {getInitials(officer.name)}
+                          </span>
+                        </div>
+
+                        <h2 className="text-xl font-extrabold leading-tight text-[#0f2f57] xl:text-[1.35rem]">
+                          {officer.name}
+                        </h2>
+
+                        <p className="mt-1 text-base font-semibold leading-tight text-[#0067c5]">
+                          {officer.position}
+                        </p>
+
+                        <div className="mt-4 flex items-center justify-center gap-3">
+                          <a
+                            href={officer.linkedin}
+                            aria-label={`${officer.name} LinkedIn`}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="flex h-10 w-10 items-center justify-center rounded-full bg-[#0067c5] text-base font-black text-white shadow-md shadow-blue-400/25 transition duration-300 hover:-translate-y-1 hover:bg-[#f26b2c]"
+                          >
+                            in
+                          </a>
+                          <a
+                            href={`mailto:${officer.email}`}
+                            aria-label={`Email ${officer.name}`}
+                            className="flex h-10 w-10 items-center justify-center rounded-full bg-[#001f5b] text-white shadow-md shadow-blue-950/25 transition duration-300 hover:-translate-y-1 hover:bg-[#f26b2c]"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              viewBox="0 0 24 24"
+                              className="h-5 w-5 fill-none stroke-current stroke-2"
+                            >
+                              <path d="M4 6h16v12H4z" />
+                              <path d="m4 7 8 6 8-6" />
+                            </svg>
+                          </a>
+                        </div>
+
+                        <div className="mt-4 w-full space-y-1 border-t border-[#d7eefb] pt-4 text-left text-sm leading-5 text-slate-800">
+                          {officer.pronouns ? (
+                            <p>
+                              <span className="font-bold text-[#0f2f57]">
+                                Pronouns:
+                              </span>{" "}
+                              {officer.pronouns}
+                            </p>
+                          ) : null}
+                          <p>
+                            <span className="font-bold text-[#0f2f57]">
+                              Major:
+                            </span>{" "}
+                            {officer.major}
+                          </p>
+                          {officer.classification ? (
+                            <p>
+                              <span className="font-bold text-[#0f2f57]">
+                                Classification:
+                              </span>{" "}
+                              {officer.classification}
+                            </p>
+                          ) : null}
+                        </div>
+                      </div>
+
+                      {/* BACK */}
+                      <div className="flip-back flex min-h-[355px] flex-col overflow-hidden rounded-[18px] border-[3px] border-[#0067c5] bg-white">
+                        <div
+                          className={`relative min-h-[250px] flex-1 ${
+                            isLogo ? "bg-[#f5fbff]" : ""
+                          }`}
+                        >
+                          <img
+                            src={imageSrc}
+                            alt={officer.name}
+                            className={
+                              isLogo
+                                ? "absolute inset-0 m-auto h-32 w-32 object-contain"
+                                : "absolute inset-0 h-full w-full object-cover"
+                            }
+                          />
+                        </div>
+                        <div className="border-t-[3px] border-[#d7eefb] bg-white px-4 py-3 text-center">
+                          <p className="text-lg font-extrabold leading-tight text-[#0f2f57]">
+                            {officer.name}
+                          </p>
+                          <p className="text-sm font-semibold text-[#0067c5]">
+                            {officer.position}
+                          </p>
+                          <p className="mt-1 text-xs text-slate-500">
+                            Click to view details
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-
-                  <h2 className="text-xl font-extrabold leading-tight text-[#0f2f57] xl:text-[1.35rem]">
-                    {officer.name}
-                  </h2>
-
-                  <p className="mt-1 text-base font-semibold leading-tight text-[#0067c5]">
-                    {officer.position}
-                  </p>
-
-                  <div className="mt-4 flex items-center justify-center gap-3">
-                    <a
-                      href={officer.linkedin}
-                      aria-label={`${officer.name} LinkedIn`}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex h-10 w-10 items-center justify-center rounded-full bg-[#0067c5] text-base font-black text-white shadow-md shadow-blue-400/25 transition duration-300 hover:-translate-y-1 hover:bg-[#f26b2c]"
-                    >
-                      in
-                    </a>
-                    <a
-                      href={`mailto:${officer.email}`}
-                      aria-label={`Email ${officer.name}`}
-                      className="flex h-10 w-10 items-center justify-center rounded-full bg-[#001f5b] text-white shadow-md shadow-blue-950/25 transition duration-300 hover:-translate-y-1 hover:bg-[#f26b2c]"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        viewBox="0 0 24 24"
-                        className="h-5 w-5 fill-none stroke-current stroke-2"
-                      >
-                        <path d="M4 6h16v12H4z" />
-                        <path d="m4 7 8 6 8-6" />
-                      </svg>
-                    </a>
-                  </div>
-
-                  <div className="mt-4 w-full space-y-1 border-t border-[#d7eefb] pt-4 text-left text-sm leading-5 text-slate-800">
-                    {officer.pronouns ? (
-                      <p>
-                        <span className="font-bold text-[#0f2f57]">
-                          Pronouns:
-                        </span>{" "}
-                        {officer.pronouns}
-                      </p>
-                    ) : null}
-                    <p>
-                      <span className="font-bold text-[#0f2f57]">Major:</span>{" "}
-                      {officer.major}
-                    </p>
-                    {officer.classification ? (
-                      <p>
-                        <span className="font-bold text-[#0f2f57]">
-                          Classification:
-                        </span>{" "}
-                        {officer.classification}
-                      </p>
-                    ) : null}
-                  </div>
-                </div>
-              </article>
-            ))}
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -229,7 +363,7 @@ export default function Leadership() {
           animation-delay: 0.6s;
         }
 
-        .officer-card:nth-child(7) {
+        .officer-card:nth-child(n + 7) {
           animation-delay: 0.7s;
         }
 
@@ -239,6 +373,46 @@ export default function Leadership() {
             0 18px 44px rgba(0, 119, 200, 0.28);
           border-color: rgba(0, 140, 90, 0.7);
         }
+
+        .flip-scene {
+  perspective: 1100px;
+  cursor: pointer;
+}
+
+.flip-inner {
+  display: grid;
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.flip-inner > * {
+  grid-area: 1 / 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-back {
+  transform: rotateY(180deg);
+}
+
+.officer-card.flipped .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.officer-card:focus-visible {
+  outline: 3px solid #76e3d0;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flip-inner {
+    transition: none;
+  }
+      }
+
+      .officer-card.no-flip .flip-scene {
+  cursor: default;
+}
       `}</style>
     </main>
   );
