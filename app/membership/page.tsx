@@ -5,7 +5,7 @@ const nationalMembershipUrl = "https://shpe.org/membership/become-a-member/";
 const committeeCards = [
   {
     title: "Fundraising Committee",
-    image: "/pictures/Everything/aguas-frescas-pic-2.jpeg",
+    image: "/Pictures/Everything/aguas-frescas-pic-2.jpeg",
     text: "Help plan fundraisers, organize sales, brainstorm creative ideas, and support events that help our chapter raise money for meetings, workshops, and future opportunities.",
   },
   {
