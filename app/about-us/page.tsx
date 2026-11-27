@@ -87,7 +87,7 @@ export default function AboutUs() {
                 description:
                   "Members develop career-ready skills through resume and LinkedIn workshops, internship panels, networking events, company presentations, and professional development sessions.",
                 image:
-                  "/images/Future.jpeg",
+                  "/images/future.jpeg",
                 alt: "SHPE members at the national convention",
               },
               {
