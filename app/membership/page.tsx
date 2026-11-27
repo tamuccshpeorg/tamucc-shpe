@@ -177,7 +177,7 @@ export default function Membership() {
               </div>
               <div className="overflow-hidden rounded-[18px] shadow-xl">
                 <img
-                  src="/images/buddy.jpeg"
+                  src="/images/buddies.jpeg"
                   alt="SHPE TAMU-CC academic workshop"
                   className="h-[260px] w-full object-cover md:h-[290px] lg:h-[300px]"
                 />
