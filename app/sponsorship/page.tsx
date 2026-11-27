@@ -39,27 +39,11 @@ export default function Sponsorship() {
       <SiteNav />
 
       <section className="page-reveal relative flex min-h-[360px] items-center justify-center overflow-hidden px-6 py-20 text-center text-white md:min-h-[420px]">
-        <div className="absolute inset-0 flex justify-center overflow-hidden">
-          <div className="h-full w-[28vw] max-w-[480px] overflow-hidden">
-            <img
-              src="/Sponsorship/convention group pciture cropped.jpeg"
-              alt=""
-              className="h-full w-[56vw] max-w-[960px] -translate-x-1/2 object-cover object-right"
-            />
-          </div>
-          <img
-            src="/Sponsorship/convention group pciture cropped.jpeg"
-            alt="SHPE TAMU-CC members at convention"
-            className="h-full w-[56vw] max-w-[960px] object-cover"
-          />
-          <div className="h-full w-[28vw] max-w-[480px] overflow-hidden">
-            <img
-              src="/Sponsorship/convention group pciture cropped.jpeg"
-              alt=""
-              className="h-full w-[56vw] max-w-[960px] object-cover object-left"
-            />
-          </div>
-        </div>
+                <img
+          src="/Sponsorship/convention group pciture cropped.jpeg"
+          alt="SHPE TAMU-CC members at convention"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
         <div className="absolute inset-0 bg-blue-950/75" />
         <div className="relative z-10 mx-auto max-w-4xl">
           <h1 className="text-4xl font-extrabold md:text-5xl">

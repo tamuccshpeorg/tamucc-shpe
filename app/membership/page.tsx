@@ -5,12 +5,12 @@ const nationalMembershipUrl = "https://shpe.org/membership/become-a-member/";
 const committeeCards = [
   {
     title: "Fundraising Committee",
-    image: "/MemberSHPE/Fundraising Comitee.jpeg",
+    image: "/pictures/Everything/aguas-frescas-pic-2.jpeg",
     text: "Help plan fundraisers, organize sales, brainstorm creative ideas, and support events that help our chapter raise money for meetings, workshops, and future opportunities.",
   },
   {
     title: "Outreach Committee",
-    image: "/MemberSHPE/salvation army group.jpeg",
+    image: "/images/outreach_comm.jpeg",
     text: "Help with community service, STEM outreach, school visits, tabling events, and activities that allow SHPE TAMU-CC to give back to the community.",
   },
 ];
@@ -68,7 +68,7 @@ export default function Membership() {
 
           <div className="overflow-hidden rounded-[28px] shadow-[0_26px_70px_rgba(7,26,68,0.2)]">
             <img
-              src="/MemberSHPE/big event group.jpeg"
+              src="/images/big-event.jpeg"
               alt="SHPE TAMU-CC members at a meeting"
               className="h-[360px] w-full object-cover md:h-[520px] lg:h-[590px]"
             />
@@ -161,7 +161,7 @@ export default function Membership() {
           <div className="grid content-center gap-5">
             <div className="overflow-hidden rounded-[22px] shadow-xl">
               <img
-                src="/MemberSHPE/shpe image 2.jpeg"
+                src="/images/Group_1.jpeg"
                 alt="SHPE TAMU-CC members"
                 className="h-[300px] w-full object-cover md:h-[350px] lg:h-[360px]"
               />
@@ -170,14 +170,14 @@ export default function Membership() {
             <div className="grid gap-5 sm:grid-cols-2">
               <div className="overflow-hidden rounded-[18px] shadow-xl">
                 <img
-                  src="/MemberSHPE/salvation army girl 2.jpeg"
+                  src="/images/community_outreach.jpeg"
                   alt="SHPE TAMU-CC member volunteering"
                   className="h-[260px] w-full object-cover md:h-[290px] lg:h-[300px]"
                 />
               </div>
               <div className="overflow-hidden rounded-[18px] shadow-xl">
                 <img
-                  src="/MemberSHPE/Academic Workshop.jpeg"
+                  src="/images/buddy.jpeg"
                   alt="SHPE TAMU-CC academic workshop"
                   className="h-[260px] w-full object-cover md:h-[290px] lg:h-[300px]"
                 />
@@ -189,7 +189,7 @@ export default function Membership() {
       <section className="page-reveal-delay-1 bg-white px-3 py-16 md:px-6">
         <div className="relative mx-auto min-h-[760px] max-w-[96rem] overflow-hidden rounded-sm shadow-2xl">
           <img
-            src="/MemberSHPE/SHPE National.jpeg"
+            src="/images/stockimage.jpeg"
             alt="SHPE National Convention members"
             className="absolute inset-0 h-full w-full object-cover"
           />

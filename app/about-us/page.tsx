@@ -19,7 +19,7 @@ export default function AboutUs() {
 
             <div className="h-[340px] overflow-hidden rounded-lg shadow-lg lg:h-[300px]">
               <img
-                src="/Pictures/About Us Section/study session.jpeg"
+                src="/images/polaroid5.png"
                 alt="SHPE members at a study session"
                 className="h-full w-full object-cover"
               />
@@ -29,7 +29,7 @@ export default function AboutUs() {
           <div className="grid items-stretch gap-5 lg:grid-cols-2">
             <div className="h-[340px] overflow-hidden rounded-[24px] shadow-[0_18px_40px_rgba(0,103,197,0.16)] lg:h-[300px]">
               <img
-                src="/Pictures/About Us Section/orgfest2.jpeg"
+                src="/images/polaroid2.png"
                 alt="SHPE members at OrgFest"
                 className="h-full w-full object-cover"
               />
@@ -50,22 +50,20 @@ export default function AboutUs() {
 
       <section className="page-reveal-delay-1 border-y border-[#86dbc6]/70 bg-[#e7f2fc] px-6 py-12 md:px-10">
         <div className="mx-auto max-w-5xl text-center">
-          <h2 className="text-4xl font-bold text-[#0f2f57]">
-            Our History
-          </h2>
+          <h2 className="text-4xl font-bold text-[#0f2f57]">Our History</h2>
 
           <div className="mx-auto mt-6 h-1 w-16 rounded-full bg-[#0067C5]" />
 
           <p className="mx-auto mt-7 max-w-4xl text-lg leading-8 text-[#0f2f57]">
             Founded in 2017, SHPE TAMU-CC was established to support Hispanic
-            and other underrepresented students pursuing degrees in
-            engineering, computer science, mathematics, and other STEM fields.
-            Since then, our chapter has fostered a welcoming community where
-            students have access to professional development opportunities,
-            academic resources, leadership experiences, and industry
-            connections. Members become part of the SHPE familia while
-            developing the skills, confidence, and relationships needed to
-            succeed in college and throughout their careers.
+            and other underrepresented students pursuing degrees in engineering,
+            computer science, mathematics, and other STEM fields. Since then,
+            our chapter has fostered a welcoming community where students have
+            access to professional development opportunities, academic
+            resources, leadership experiences, and industry connections. Members
+            become part of the SHPE familia while developing the skills,
+            confidence, and relationships needed to succeed in college and
+            throughout their careers.
           </p>
         </div>
       </section>
@@ -76,9 +74,9 @@ export default function AboutUs() {
             <h2 className="text-4xl font-bold text-[#0f2f57]">What We Do</h2>
             <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-slate-600">
               SHPE TAMU-CC provides opportunities for students to grow
-              professionally, serve their community, develop leadership
-              skills, and build meaningful connections that support their
-              success in STEM.
+              professionally, serve their community, develop leadership skills,
+              and build meaningful connections that support their success in
+              STEM.
             </p>
           </div>
 
@@ -88,28 +86,29 @@ export default function AboutUs() {
                 title: "Professional Development",
                 description:
                   "Members develop career-ready skills through resume and LinkedIn workshops, internship panels, networking events, company presentations, and professional development sessions.",
-                image: "/Pictures/About Us Section/National Convention Duo .jpeg",
+                image:
+                  "/images/Future.jpeg",
                 alt: "SHPE members at the national convention",
               },
               {
                 title: "Community Outreach",
                 description:
                   "Members give back through STEM outreach events, volunteer initiatives, and service projects that inspire and support the local community.",
-                image: "/Pictures/About Us Section/salvation army girl 1.jpeg",
+                image: "/images/outreach_comm.jpeg",
                 alt: "SHPE member participating in community outreach",
               },
               {
                 title: "Fundraising",
                 description:
                   "Through fundraising efforts, we support chapter activities, professional development opportunities, conference travel, and member success.",
-                image: "/Pictures/About Us Section/aguas frescas pic 1.jpeg",
+                image: "/images/fundraising.jpeg",
                 alt: "SHPE members at a chapter fundraiser",
               },
               {
                 title: "General Meetings",
                 description:
                   "Our meetings bring members together through guest speakers, professional development activities, networking opportunities, and community building.",
-                image: "/Pictures/About Us Section/meeting1.jpeg",
+                image: "/images/generalmeeting.jpeg",
                 alt: "SHPE members attending a general meeting",
               },
             ].map((item) => (
