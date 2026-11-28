@@ -48,7 +48,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-      <section className="page-reveal-delay-1 border-y border-[#86dbc6]/70 bg-[#e7f2fc] px-6 py-12 md:px-10">
+      <section className="page-reveal-delay-1 bg-[#e7f2fc] px-6 py-12 md:px-10">
         <div className="mx-auto max-w-5xl text-center">
           <h2 className="text-4xl font-bold text-[#0f2f57]">Our History</h2>
 

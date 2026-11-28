@@ -16,14 +16,13 @@ const committeeCards = [
 ];
 
 const allPointWays = [
-  ["3/hr", "Volunteer at a fundraiser or SHPE event"],
-  ["2/hr", "Volunteer at outreach or community service"],
+  ["3/hr", "Volunteer at a fundraiser"],
+  ["2/hr", "Volunteer at a community event"],
   ["3", "Attend a professional workshop"],
   ["2", "Attend a general meeting"],
   ["2", "Academic workshop or study night"],
-  ["1", "Social event"],
-  ["4", "Elections/voting"],
-  ["1", "Wear SHPE shirt/merch to a general meeting or event"],
+  ["3", "Social event"],
+  ["1", "Wear SHPE shirt/merch to a event"],
   ["1/event", "Submit usable event pictures/videos"],
 ];
 
@@ -50,7 +49,7 @@ export default function Membership() {
                 to the familia!
               </span>
             </h1>
-            <span className="mt-7 block h-1.5 w-24 rounded-full bg-[#f26b2c]" />
+            
             <p className="mt-9 max-w-2xl text-lg leading-8 text-[#071a44]/85 md:text-xl md:leading-9">
               SHPE TAMU-CC is a community for students who want to grow
               academically, professionally, and socially. Whether you are
@@ -58,11 +57,7 @@ export default function Membership() {
               welcome to join and take advantage of opportunities at both the
               local and national levels.
             </p>
-            <div className="mt-10 border-l-4 border-[#0067C5] pl-5">
-              <p className="font-serif text-xl italic leading-8 text-[#071a44] md:text-2xl">
-                Keep scrolling to learn more about MemberSHPE.
-              </p>
-            </div>
+            
 
           </article>
 
@@ -130,10 +125,7 @@ export default function Membership() {
             <h2 className="font-serif text-5xl font-black leading-none text-[#0f2f57] md:text-6xl">
               The Point System
             </h2>
-            <div className="mt-5 flex items-center gap-3">
-              <span className="h-1 w-20 rounded-full bg-[#E07523]" />
-              <span className="h-px flex-1 bg-slate-200" />
-            </div>
+            
 
             <h3 className="mt-9 text-2xl font-black text-[#0f2f57]">
               Ways to Earn Points
@@ -198,7 +190,7 @@ export default function Membership() {
               <h2 className="font-serif text-5xl font-extrabold leading-tight md:text-6xl">
                 National Membership
               </h2>
-              <span className="mt-6 block h-1.5 w-24 rounded-full bg-[#E07523]" />
+              
 
               <p className="mt-8 text-2xl font-extrabold text-[#E07523]">
                 Undergraduate Membership ($10/year)

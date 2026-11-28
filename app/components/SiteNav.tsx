@@ -15,7 +15,7 @@ export default function SiteNav() {
   const pathname = usePathname();
 
   return (
-    <nav className="sticky top-0 z-50 flex flex-wrap items-center gap-8 border-b border-[#86dbc6] bg-white/95 px-6 py-4 shadow-[0_8px_28px_rgba(0,103,197,0.08)] backdrop-blur md:px-12 lg:gap-16">
+    <nav className="sticky top-0 z-50 flex flex-wrap items-center gap-8 bg-white/95 px-6 py-4 shadow-[0_8px_28px_rgba(0,103,197,0.08)] backdrop-blur md:px-12 lg:gap-16">
       <Link href="/" aria-label="SHPE TAMU-CC home">
         <img
           src="/Pictures/logos/shpe_logo.png"
@@ -35,8 +35,8 @@ export default function SiteNav() {
             <Link
               key={item.href}
               href={item.href}
-              className={`rounded-full px-3 py-1.5 transition hover:bg-[#defbf5] hover:text-[#0b8b70] ${
-                isActive ? "bg-[#defbf5] font-bold text-[#0b8b70]" : ""
+              className={`rounded-full px-3 py-1.5 transition hover:bg-slate-100 hover:text-[#0067C5] ${
+                isActive ? "bg-[#fdebdc] text-[#E07523]" : ""
               }`}
             >
               {item.label}
